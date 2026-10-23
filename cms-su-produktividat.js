@@ -1,0 +1,2 @@
+/* Text-only CMS overlay with original HTML fallback. */
+(async()=>{try{const r=await fetch('cms-pages/su-produktividat.json',{cache:'no-store'});if(!r.ok)return;const d=await r.json();for(const lang of ['pap','en']){const nodes=document.querySelectorAll('#page-'+lang+' .hero .hero-row > div > p');for(let i=0;i<2;i++){const value=d[lang+'_intro_'+(i===0?'one':'two')];if(nodes[i]&&typeof value==='string'&&value.trim())nodes[i].textContent=value;}}}catch(e){console.warn('Su produktividat CMS: original text retained',e);}})();
