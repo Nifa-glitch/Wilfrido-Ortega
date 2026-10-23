@@ -165,3 +165,18 @@ content:
         label: Second research paragraph (English)
         type: text
         required: true
+
+  - name: distribushon_text
+    label: Distribushon — tekst bewerken (pilot)
+    type: file
+    path: cms-pages/distribushon.json
+    format: json
+    fields:
+      - name: pap_first_paragraph
+        label: Porta pa porta — eerste alinea (Papiamentu)
+        type: text
+        required: true
+      - name: en_first_paragraph
+        label: Door to door — first paragraph (English)
+        type: text
+        required: true
