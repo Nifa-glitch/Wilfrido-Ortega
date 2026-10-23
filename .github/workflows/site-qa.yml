@@ -1,0 +1,23 @@
+name: Static website QA on CMS branch
+on:
+  push:
+    branches: [cms-v16-preparation]
+    paths:
+      - 'scripts/check-site.cjs'
+      - '.github/workflows/site-qa.yml'
+      - 'catalogus.html'
+      - 'bibliography-data.js'
+      - 'app.js'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  website-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify bibliography and website integration statically
+        run: node scripts/check-site.cjs
