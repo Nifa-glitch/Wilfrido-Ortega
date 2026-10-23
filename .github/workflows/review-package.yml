@@ -1,0 +1,35 @@
+name: Build website review package
+on:
+  workflow_dispatch:
+  push:
+    branches: [cms-v16-preparation]
+    paths:
+      - '.github/workflows/review-package.yml'
+      - 'scripts/check-review-assets.py'
+      - '*.html'
+      - '*.css'
+      - '*.js'
+      - '*.png'
+      - '*.jpeg'
+      - '*.jpg'
+permissions:
+  contents: read
+jobs:
+  review-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check image references and build preview folder
+        run: |
+          python scripts/check-review-assets.py
+          mkdir -p preview
+          find . -maxdepth 1 -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.webp' -o -name '*.svg' \) -exec cp {} preview/ \;
+          echo 'Start at index.html. This is a review copy from cms-v16-preparation; it is not published to main.' > preview/REVIEW-README.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wilfrido-v16-review-site
+          path: preview/
+          retention-days: 30
