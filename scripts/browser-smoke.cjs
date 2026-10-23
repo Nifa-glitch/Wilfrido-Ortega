@@ -46,6 +46,17 @@ const assert = require('node:assert/strict');
     assert((await page.locator('body').innerText()).trim().length>100,p+' is blank');
  }
  assert.equal(missingImages.length,0,'Missing images: '+missingImages.join(' | '));
+ // Verify contrast in dark sections; a light foreground must be computed
+ // even when the design system imposes a dark heading or paragraph color.
+ for (const route of ['index.html','tokante.html']) {
+   await page.goto(base+route,{waitUntil:'domcontentloaded'});
+   const samples=await page.locator('.sec.blue p, .sec.blue h2, .overview p, .overview h2, .question p').evaluateAll(nodes=>nodes.map(el=>{
+     const c=getComputedStyle(el).color.match(/[\\d.]+/g)?.slice(0,3).map(Number)||[];
+     return {text:el.textContent.trim().slice(0,45),brightness:c.reduce((a,b)=>a+b,0)/3,color:getComputedStyle(el).color};
+   }));
+   assert(samples.length>0,route+' missing dark-section contrast samples');
+   assert(samples.every(item=>item.brightness>155),route+' contains dark text on dark background: '+JSON.stringify(samples.filter(x=>x.brightness<=155)));
+ }
  assert.equal(errors.length,0,'Browser JS errors: '+errors.join(' | '));
  await browser.close();
  console.log('PASS: desktop/mobile catalog, 212 records, search, no-results, genre filter, reset, language switch, six pages, no JS exceptions.');
