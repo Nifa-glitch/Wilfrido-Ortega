@@ -80,3 +80,14 @@ body main .overview .milestone,body main .overview .milestone p {
  color:#253844!important;
 }
 body main .sec.blue .milestone h3,body main .overview .milestone h3 {color:#172f45!important;}
+
+/* Distribushon: image caption and quotation sit on light cream/sage panels.
+   Do not inherit the light foreground intended for genuinely dark sections. */
+body.catalog-mode main .v5-photo-panel blockquote,
+body.catalog-mode main .v5-photo-panel blockquote p {
+ color:#253844!important;
+}
+body.catalog-mode main .v5-photo-panel .v5-quote,
+body.catalog-mode main .v5-photo-panel .v5-quote p {
+ color:#253844!important;
+}
