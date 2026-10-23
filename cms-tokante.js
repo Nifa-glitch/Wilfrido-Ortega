@@ -1,0 +1,2 @@
+/* Tokante CMS overlay: preserves original markup and uses text-only updates. */
+(async()=>{try{const response=await fetch('cms-pages/tokante.json',{cache:'no-store'});if(!response.ok)return;const data=await response.json();for(const lang of ['pap','en']){const node=document.querySelector('#page-'+lang+' .opening');const value=data[lang+'_opening'];if(node&&typeof value==='string'&&value.trim())node.textContent=value;}}catch(error){console.warn('Tokante CMS: original content retained',error);}})();
