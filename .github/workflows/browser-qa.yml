@@ -8,6 +8,7 @@ on:
       - 'catalogus.html'
       - 'index.html'
       - 'app.js'
+      - 'v16-visible-corrections.css'
   workflow_dispatch:
 permissions:
   contents: read
