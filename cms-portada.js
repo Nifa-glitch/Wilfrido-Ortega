@@ -4,11 +4,18 @@
     const response = await fetch('cms-pages/portada.json', {cache:'no-store'});
     if (!response.ok) return;
     const data = await response.json();
-    for (const [lang,key] of [['pap','pap_hero_intro'],['en','en_hero_intro']]) {
-      const content = data[key];
-      const element = document.querySelector('main[data-content="'+lang+'"] .hero p.lead');
-      if (element && typeof content === 'string' && content.trim()) {
-        element.textContent = content;
+    const editable = [
+      ['hero_intro', '.hero p.lead'],
+      ['archive_heading', '.sec.alt h2'],
+      ['destino_description', '.destino-feature h2 + p']
+    ];
+    for (const lang of ['pap','en']) {
+      for (const [key,selector] of editable) {
+        const content = data[lang+'_'+key];
+        const element = document.querySelector('main[data-content="'+lang+'"] '+selector);
+        if (element && typeof content === 'string' && content.trim()) {
+          element.textContent = content;
+        }
       }
     }
   } catch (error) {
