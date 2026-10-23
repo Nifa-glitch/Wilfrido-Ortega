@@ -10,7 +10,17 @@ function extract(text) {
   const i = text.indexOf(prefix);
   assert(i >= 0, 'Bibliography assignment missing');
   const fragment = text.slice(i + prefix.length);
-  const end = fragment.indexOf('];');
+  let depth = 0, inString = false, escaped = false, end = -1;
+  for (let p = 0; p < fragment.length; p++) {
+    const ch = fragment[p];
+    if (inString) {
+      if (escaped) escaped = false;
+      else if (ch === '\\\\') escaped = true;
+      else if (ch === '"') inString = false;
+    } else if (ch === '"') inString = true;
+    else if (ch === '[') depth++;
+    else if (ch === ']' && --depth === 0) { end = p; break; }
+  }
   assert(end >= 0, 'Bibliography array terminator missing');
   return JSON.parse(fragment.slice(0, end + 1));
 }
