@@ -1,0 +1,22 @@
+name: Validate bibliography CMS data
+on:
+  push:
+    branches: [cms-v16-preparation]
+    paths:
+      - 'cms-editable/**'
+      - 'cms/bibliography/**'
+      - 'scripts/sync_bibliography.py'
+      - '.github/workflows/validate-bibliography.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check-bibliography:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate 212 CMS records and preview generated changes (no writes)
+        run: python scripts/sync_bibliography.py
