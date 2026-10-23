@@ -1,0 +1,45 @@
+/* Wilfrido Ortega v16: specifically scoped corrections, loaded last. */
+:root { --wo-canvas-fixed: #fbf7ed; --wo-title-fixed:#172f45; }
+/* The actual canvas and all default background wrappers now use one colour. */
+html, body, body.catalog-mode, body.wo-v13, body.wo-v15-history, body.wo-v15-works {
+ background:var(--wo-canvas-fixed)!important;
+ background-color:var(--wo-canvas-fixed)!important;
+}
+body > main, body > main#main, body.catalog-mode > main#main,
+body.catalog-mode #main, body.catalog-mode #app,
+body.catalog-mode #page, body.catalog-mode .page, body.catalog-mode .main-content {
+ background-color:var(--wo-canvas-fixed)!important;
+}
+/* Page-opening sections: keep actual archival/editorial content panels in their original colours. */
+body main > section.hero:not(.v10-home-hero),
+body main .page-heading,
+body.catalog-mode main .page-heading,
+body.catalog-mode main .v5-dist,
+body.catalog-mode main .dist-page {
+ background:var(--wo-canvas-fixed)!important;
+ background-color:var(--wo-canvas-fixed)!important;
+}
+/* Explicitly target BOTH language copies of the Su historia/Su obranan hero headings.
+   These selectors override the former 4.5rem generic rule and page-local CSS. */
+html body.wo-v15-history main section.hero .hero-row h1,
+html body.wo-v15-works main section.hero .hero-row h1 {
+ font-family:Georgia,'Times New Roman',serif!important;
+ font-size:clamp(3.5rem,6.15vw,6.25rem)!important;
+ font-weight:400!important;
+ font-style:normal!important;
+ line-height:1.06!important;
+ letter-spacing:-.035em!important;
+ color:var(--wo-title-fixed)!important;
+ margin-top:.22em!important;
+ margin-bottom:.28em!important;
+}
+html body.wo-v15-works main section.hero .hero-row h1 em {
+ font-size:inherit!important;
+ color:#b49356!important;
+ font-style:italic!important;
+ font-weight:400!important;
+}
+@media(max-width:700px) {
+ html body.wo-v15-history main section.hero .hero-row h1,
+ html body.wo-v15-works main section.hero .hero-row h1 {font-size:clamp(2.85rem,10vw,4.2rem)!important;}
+}

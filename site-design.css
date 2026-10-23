@@ -1,0 +1,105 @@
+/* v10: single shared design system — typography, palette, navigation, page headings. */
+:root{--v9-blue:#172f45;--v9-ivory:#fbf7ed;--v9-gold:#b49356;--v9-sage:#dce5dc}
+body > header.site-header,body > header.header{box-sizing:border-box!important;width:100%!important;min-height:94px!important;height:auto!important;padding:18px clamp(20px,3vw,46px)!important;margin:0!important;background:var(--v9-blue)!important;color:var(--v9-ivory)!important;border:0!important;border-bottom:3px solid var(--v9-gold)!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;flex-wrap:wrap!important;position:relative;z-index:20}
+body > header .brand,body > header .logo,body > header .wordmark{display:block!important;flex:0 0 auto!important;margin:0!important;padding:0!important;color:#fbf7ed!important;font-family:Georgia,'Times New Roman',serif!important;font-size:25px!important;font-weight:700!important;letter-spacing:0!important;line-height:1.08!important;text-transform:none!important;text-decoration:none!important;white-space:nowrap!important}
+body > header .brand small,body > header .logo small,body > header .wordmark small{display:block!important;margin-top:7px!important;color:#d5bd91!important;font:9px/1.2 Arial,sans-serif!important;letter-spacing:2px!important;text-transform:uppercase!important}
+body > header nav.nav.v6-topnav{display:flex!important;flex:1 1 auto!important;justify-content:center!important;align-items:center!important;gap:clamp(9px,1.35vw,19px)!important;flex-wrap:wrap!important;padding:0!important;margin:0!important;background:transparent!important;position:static!important;width:auto!important;min-width:0!important;font-family:Arial,sans-serif!important}
+body > header nav.nav.v6-topnav a{font:normal 12px/1.5 Arial,sans-serif!important;letter-spacing:0!important;color:#f2ede2!important;text-decoration:none!important;opacity:.84!important;white-space:nowrap!important;padding:5px 0!important;border:0!important;border-bottom:2px solid transparent!important;background:transparent!important}
+body > header nav.nav.v6-topnav a[aria-current='page'],body > header nav.nav.v6-topnav a:hover{opacity:1!important;color:#fff!important;border-bottom-color:var(--v9-gold)!important}
+body > header .lang,body > header .languages,body > header .language-switch{display:flex!important;align-items:center!important;justify-content:center!important;gap:5px!important;flex:0 0 auto!important;margin:0!important;padding:4px!important;border:1px solid #aa926c!important;border-radius:3px!important;background:transparent!important;color:#f6eee2!important;font-family:Arial,sans-serif!important}
+body > header .lang button,body > header .languages button,body > header .language-switch button{font:700 11px/1.4 Arial,sans-serif!important;color:#f3e9d9!important;background:transparent!important;border:0!important;border-radius:2px!important;padding:5px 7px!important;cursor:pointer!important;min-width:33px!important}
+body > header .lang button.selected,body > header .lang button[aria-pressed='true'],body > header .languages button[aria-pressed='true'],body > header .language-switch button[aria-pressed='true']{background:var(--v9-gold)!important;color:#172f45!important}
+body > header .lang span,body > header .languages span{display:none!important}
+body > header a:focus-visible,body > header button:focus-visible{outline:2px solid #e7c77f!important;outline-offset:3px!important}
+/* Consistent heading type, without overriding each page's unique editorial composition. */
+main h1,main h2,section h1,section h2{font-family:Georgia,'Times New Roman',serif;letter-spacing:-.025em}
+@media(max-width:900px){body > header.site-header,body > header.header{gap:12px!important;padding:16px 20px!important}body > header nav.nav.v6-topnav{order:3!important;flex-basis:100%!important;justify-content:flex-start!important;gap:9px 17px!important}}
+@media(max-width:560px){body > header .brand,body > header .logo,body > header .wordmark{font-size:21px!important}body > header nav.nav.v6-topnav a{font-size:11px!important}}
+/* The catalog uses its original mobile navigation logic; harmonize its header without changing that behavior. */
+body > header.site-header:has(.header-inner){min-height:94px!important;padding:0 clamp(20px,3vw,46px)!important}
+body > header .header-inner{width:100%!important;max-width:none!important;margin:0!important;min-height:91px!important;padding:14px 0!important;gap:20px!important;display:flex!important;align-items:center!important;box-sizing:border-box!important}
+body > header .header-inner .brand{display:block!important;font-family:Georgia,'Times New Roman',serif!important;font-size:25px!important;font-weight:700!important;letter-spacing:0!important;line-height:1.08!important;text-transform:none!important}
+body > header .header-inner .brand .brand-monogram{display:none!important}
+body > header .header-inner .brand em{color:inherit!important;font-style:normal!important}
+body > header .header-inner .brand .v9-subtitle{display:block!important;margin-top:7px!important;color:#d5bd91!important;font:9px/1.2 Arial,sans-serif!important;letter-spacing:2px!important}
+body > header .header-inner .main-nav{margin-left:auto!important;gap:clamp(9px,1.35vw,19px)!important}
+body > header .header-inner .main-nav a{font:normal 12px/1.5 Arial,sans-serif!important;color:#f2ede2!important;padding:5px 0!important;opacity:.84!important;border-bottom:2px solid transparent!important}
+body > header .header-inner .main-nav a.active,body > header .header-inner .main-nav a:hover{opacity:1!important;color:#fff!important;border-bottom-color:var(--v9-gold)!important}
+body > header .header-inner .language-switch{margin-left:0!important}
+@media(max-width:900px){body > header .header-inner{flex-wrap:wrap!important}body > header .header-inner .main-nav{justify-content:flex-start!important;flex-basis:100%!important;order:4!important}}
+/* Preserve the catalog's built-in menu toggle and its breakpoint behavior. */
+@media(max-width:700px){body > header .header-inner .main-nav{flex-basis:auto!important;order:initial!important}body > header .header-inner .brand{font-size:21px!important}}
+
+/* Website-wide design tokens, independent of older page-specific aliases */
+:root {
+ --v10-blue:#172f45;--v10-blue-light:#213d51;--v10-ivory:#fbf7ed;
+ --v10-gold:#b49356;--v10-sage:#dce5dc;--v10-ink:#253844;
+ --v10-serif:Georgia,'Times New Roman',serif;
+ --v10-sans:Arial,Helvetica,sans-serif;
+ --navy:#172f45;--navy2:#213d51;--deep:#172f45;--deep2:#172f45;
+ --ivory:#fbf7ed;--paper:#fbf7ed;--cream:#fbf7ed;--gold:#b49356;
+ --sage:#dce5dc;--ink:#253844;
+}
+html{font-size:16px}
+body{background:var(--v10-ivory)!important;color:var(--v10-ink)!important;font-family:var(--v10-serif)!important;font-size:16px;line-height:1.7}
+/* Use a single typographic rhythm without flattening page-specific editorial arrangements. */
+main p,main li,main blockquote{font-family:var(--v10-serif);line-height:1.72}
+main h1,main h2,main h3,main h4{font-family:var(--v10-serif)!important;color:var(--v10-blue);font-weight:400;letter-spacing:-.025em}
+main h1{line-height:1.09}
+main h2{line-height:1.2}
+main h3{line-height:1.25}
+main .sec h2,main .section h2,main .panel h2,main .destino-feature h2{font-size:clamp(2rem,3.5vw,3rem)!important;font-weight:400!important}
+main .copy p,main .panel p,main .section p{font-size:1.075rem;line-height:1.78}
+main .eyebrow,main .kicker,main .section-n,main .v5-eyebrow,
+main .tag,main .breadcrumb{font-family:var(--v10-sans)!important;color:#866736;letter-spacing:.1em}
+/* Shared page-title treatment for non-home sections. Home's author-name hero is intentional. */
+body:not(.catalog-mode) main .hero h1:not(.v10-home-title),
+body:not(.catalog-mode) main .page-heading h1{font-size:clamp(2.8rem,5vw,4.5rem)!important;line-height:1.08!important;font-weight:400!important;color:var(--v10-blue)!important;letter-spacing:-.035em!important}
+body:not(.catalog-mode) main .hero:not(.v10-home-hero){background:linear-gradient(110deg,#f0e9db,#fbf7ed)!important}
+main .hero .deck{color:#755b35!important}
+/* Homepage retains distinctive large title but uses the exact same fonts and colors. */
+main .v10-home-title{font-family:var(--v10-serif)!important;color:var(--v10-blue)!important;font-weight:400!important}
+/* Shared controls and section surfaces; no changes to item position/behavior. */
+main .btn,main button,main input,main select{font-family:var(--v10-sans)}
+main .btn{border-radius:2px}
+main img{max-width:100%;height:auto}
+/* Header consistency on Home and Investigashon: old page media rules hid the menu. */
+body > header.v9-standard-header nav.nav.v6-topnav{display:flex!important;visibility:visible!important}
+body > header.v9-standard-header .lang,body > header.v9-standard-header .languages{display:flex!important}
+body > header.v9-standard-header .wordmark{font-style:normal!important;text-align:left!important}
+body > header.v9-standard-header .wordmark small{margin-top:7px!important;text-align:left!important}
+/* Invest. and home: local old styles must not override the shared page framework. */
+body > header.v9-standard-header{background:var(--v10-blue)!important}
+footer.footer{background:var(--v10-blue)!important;color:#e2d6bf!important}
+@media(max-width:900px){body > header.v9-standard-header nav.nav.v6-topnav{display:flex!important;flex-basis:100%!important;order:3!important;justify-content:flex-start!important}}
+@media(max-width:560px){body > header.v9-standard-header{padding:14px 17px!important}body > header.v9-standard-header nav.nav.v6-topnav{gap:7px 13px!important}body > header.v9-standard-header nav.nav.v6-topnav a{font-size:11px!important}}
+
+/* Catalog pages and distribution are part of the same design system. */
+body:has(.header-inner){--deep:#172f45;--deep2:#172f45;--gold:#b49356;--paper:#fbf7ed;--cream:#fbf7ed;--ink:#253844}
+body:has(.header-inner) .page-heading h1{font-family:var(--v10-serif)!important;color:var(--v10-blue)!important}
+body:has(.header-inner) .main-nav{font-family:var(--v10-sans)!important}
+
+/* v11 — unified visual identity; Portada is the reference. */
+:root{--wo-blue:#172f45;--wo-ivory:#fbf7ed;--wo-gold:#b49356;--wo-sage:#dce5dc;--wo-ink:#253844;--wo-serif:Georgia,'Times New Roman',serif;--wo-sans:Arial,Helvetica,sans-serif}
+html{font-size:16px!important}
+body{color:var(--wo-ink)!important;background:var(--wo-ivory)!important;font-family:var(--wo-serif)!important}
+/* Main navigation is now the SAME markup on five pages; catalog retains its required dynamic nav. */
+body>header.wo-unified-header,body>header.wo-unified-header:has(.header-inner){box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:space-between!important;flex-wrap:wrap!important;gap:clamp(10px,1.4vw,24px)!important;min-height:109px!important;padding:18px clamp(18px,3vw,50px)!important;background:#172f45!important;border-bottom:3px solid #b49356!important;box-shadow:none!important;color:#fbf7ed!important}
+body>header.wo-unified-header .brand,body>header.wo-unified-header .header-inner .brand{font:italic 700 clamp(23px,2.05vw,31px)/1.12 Georgia,'Times New Roman',serif!important;letter-spacing:-.01em!important;color:#fbf7ed!important;white-space:nowrap!important;text-decoration:none!important}
+body>header.wo-unified-header .brand small,body>header.wo-unified-header .header-inner .brand .v9-subtitle{display:block!important;margin-top:7px!important;font:700 10px/1.2 Arial,Helvetica,sans-serif!important;letter-spacing:2.4px!important;color:#d5bd91!important;font-style:normal!important}
+body>header.wo-unified-header nav.v6-topnav,body>header.wo-unified-header .header-inner .main-nav{display:flex!important;align-items:center!important;justify-content:center!important;flex-wrap:wrap!important;gap:clamp(9px,1.3vw,22px)!important;flex:1 1 auto!important;background:none!important;border:0!important}
+body>header.wo-unified-header nav.v6-topnav a,body>header.wo-unified-header .header-inner .main-nav a{font:400 13px/1.4 Arial,Helvetica,sans-serif!important;letter-spacing:0!important;color:#f3efe6!important;border-bottom:2px solid transparent!important;text-decoration:none!important;padding:7px 0!important;text-transform:none!important;white-space:nowrap!important}
+body>header.wo-unified-header nav a[aria-current='page'],body>header.wo-unified-header .main-nav a.active,body>header.wo-unified-header nav a:hover{border-bottom-color:#b49356!important;color:white!important}
+body>header.wo-unified-header .lang,body>header.wo-unified-header .languages,body>header.wo-unified-header .language-switch{border:1px solid #b49356!important;background:transparent!important;display:flex!important;align-items:center!important;gap:0!important;padding:4px!important;border-radius:3px!important}
+body>header.wo-unified-header .lang button,body>header.wo-unified-header .languages button,body>header.wo-unified-header .language-switch button{font:700 12px/1.3 Arial,Helvetica,sans-serif!important;padding:6px 10px!important;border:0!important;border-radius:2px!important;background:transparent!important;color:#fbf7ed!important}
+body>header.wo-unified-header .lang button.selected,body>header.wo-unified-header .lang button[aria-pressed='true'],body>header.wo-unified-header .languages button[aria-pressed='true'],body>header.wo-unified-header .language-switch button[aria-pressed='true']{background:#b49356!important;color:#172f45!important}
+/* Single typography standard. Different layouts are retained, not different type systems. */
+body main h1,body main h2,body main h3,body main h4,body .hero h1,body .hero h2,body .page-heading h1,body .feature h2{font-family:var(--wo-serif)!important;color:#172f45!important;font-style:normal;letter-spacing:-.027em!important}
+body main p,body main li,body main blockquote,body main .intro,body main .deck{font-family:var(--wo-serif)!important;color:var(--wo-ink);line-height:1.7}
+body main .eyebrow,body main .kicker,body main .tag,body main .section-n,body main .label,body main .breadcrumb{font-family:var(--wo-sans)!important;color:#916c32!important;letter-spacing:.08em}
+body main a:not(.button):not(.btn){text-decoration-color:var(--wo-gold)}
+/* Catalogue interface controls remain sans-serif for legibility and don't inherit prose styles. */
+body button,body input,body select,body textarea,body nav{font-family:var(--wo-sans)!important}
+body main img{max-width:100%;height:auto}
+@media(max-width:1070px){body>header.wo-unified-header{gap:12px!important}body>header.wo-unified-header nav.v6-topnav{order:3!important;flex-basis:100%!important;justify-content:center!important}body>header.wo-unified-header .header-inner{flex-wrap:wrap!important}}
+@media(max-width:700px){body>header.wo-unified-header{padding:15px 18px!important}body>header.wo-unified-header nav.v6-topnav{justify-content:flex-start!important;gap:8px 14px!important}body>header.wo-unified-header nav.v6-topnav a{font-size:12px!important}body>header.wo-unified-header .header-inner .main-nav{flex:initial!important}body>header.wo-unified-header .header-inner .brand{font-size:23px!important}}
