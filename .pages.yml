@@ -56,16 +56,11 @@ content:
 
   - name: bibliography_safety_test
     label: TEST — veilig opslaan (kopie)
-    type: collection
-    path: cms-test
+    type: file
+    path: cms-test/wo-record-0001-test.json
     format: json
     operations:
-      create: false
-      rename: false
       delete: false
-    view:
-      primary: title
-      fields: [title, year, genre]
     fields:
       - name: id
         label: Record-ID
