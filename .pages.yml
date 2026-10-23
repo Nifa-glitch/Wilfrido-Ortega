@@ -73,3 +73,19 @@ content:
         label: Portada — introduction (English)
         type: text
         required: true
+      - name: pap_archive_heading
+        label: Portada — archiefkop (Papiamentu)
+        type: string
+        required: true
+      - name: en_archive_heading
+        label: Portada — archive heading (English)
+        type: string
+        required: true
+      - name: pap_destino_description
+        label: Portada — Destino di Amor tekst (Papiamentu)
+        type: text
+        required: true
+      - name: en_destino_description
+        label: Portada — Destino di Amor text (English)
+        type: text
+        required: true
