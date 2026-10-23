@@ -1,0 +1,55 @@
+# Pages CMS pilot — work branch only; website is not yet connected to these records.
+media:
+  input: cms/media
+  output: /cms/media
+settings:
+  content:
+    merge: true
+content:
+  - name: bibliography
+    label: Bibliografia — onderzoeksregister (test)
+    type: collection
+    path: cms/bibliography
+    format: json
+    filename: "{primary}.json"
+    operations:
+      create: false
+      rename: false
+      delete: false
+    view:
+      primary: title
+      fields: [title, year, genre, series, reviewStatus]
+      search: [title, year, series, genre]
+    fields:
+      - name: id
+        label: Record-ID (niet wijzigen)
+        type: string
+        readonly: true
+      - name: title
+        label: Titel
+        type: string
+        required: true
+      - name: variant
+        label: Titelvariant
+        type: string
+      - name: series
+        label: Serie
+        type: string
+      - name: volume
+        label: Deel / tomo
+        type: string
+      - name: year
+        label: Publicatiejaar (zoals gedocumenteerd)
+        type: string
+      - name: genre
+        label: Genre
+        type: string
+      - name: image
+        label: Omslagafbeelding
+        type: image
+      - name: research_note
+        label: Onderzoeksnotitie
+        type: text
+      - name: reviewStatus
+        label: Controle-status
+        type: string
