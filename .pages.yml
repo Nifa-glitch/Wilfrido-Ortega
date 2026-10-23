@@ -1,32 +1,52 @@
-# SAFETY HOLD: The original bibliography collection is intentionally hidden.
-# Pages CMS destroyed nested fields in a save test despite merge:true.
-# DO NOT enable original record editing until a lossless workflow is validated.
+# Pages CMS safety pilot: only separate editable fields. Original 212 research records stay read-only.
 media:
   input: cms/media
   output: /cms/media
-settings:
-  content:
-    merge: true
 content:
-  - name: bibliography_safety_test
-    label: TEST — veilig opslaan (kopie)
+  - name: bibliography_edit_pilot
+    label: TEST — boek bewerken (zonder brongegevens)
     type: file
-    path: cms-test/wo-record-0001-test.json
+    path: cms-editable/wo-record-0001.json
     format: json
-    operations:
-      delete: false
     fields:
       - name: id
-        label: Record-ID
+        label: Record-ID (vast)
         type: string
         readonly: true
       - name: title
-        label: Titel (testkopie)
+        label: Titel
         type: string
         required: true
+      - name: variant
+        label: Titelvariant
+        type: string
+      - name: author
+        label: Auteur
+        type: string
+      - name: series
+        label: Serie
+        type: string
+      - name: volume
+        label: Deel / tomo
+        type: string
       - name: year
-        label: Jaar
+        label: Publicatiejaar
         type: string
       - name: genre
         label: Genre
         type: string
+      - name: publisher
+        label: Uitgever
+        type: string
+      - name: collection
+        label: Collectie / vindplaats (redactionele toelichting)
+        type: string
+      - name: description
+        label: Beschrijving
+        type: text
+      - name: image
+        label: Omslagafbeelding
+        type: image
+      - name: research_note
+        label: Onderzoeksnotitie
+        type: text
