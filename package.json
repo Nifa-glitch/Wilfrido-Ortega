@@ -1,0 +1,13 @@
+{
+  "name": "wilfrido-ortega-v16-review",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Preview only — original static HTML pages remain unchanged",
+  "scripts": {
+    "start": "vite --host 0.0.0.0",
+    "dev": "vite --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "vite": "^6.3.0"
+  }
+}
