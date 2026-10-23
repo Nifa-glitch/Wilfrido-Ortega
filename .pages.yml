@@ -89,3 +89,18 @@ content:
         label: Portada — Destino di Amor text (English)
         type: text
         required: true
+
+  - name: su_historia_text
+    label: Su historia — tekst bewerken (pilot)
+    type: file
+    path: cms-pages/su-historia.json
+    format: json
+    fields:
+      - name: pap_hero_lead
+        label: Su historia — introductieregel (Papiamentu)
+        type: text
+        required: true
+      - name: en_hero_lead
+        label: Su historia — introductory line (English)
+        type: text
+        required: true
