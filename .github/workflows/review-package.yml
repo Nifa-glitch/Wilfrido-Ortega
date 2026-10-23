@@ -27,6 +27,8 @@ jobs:
           python scripts/check-review-assets.py
           mkdir -p preview
           find . -maxdepth 1 -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.webp' -o -name '*.svg' \) -exec cp {} preview/ \;
+          mkdir -p preview/cms-pages
+          cp cms-pages/portada.json preview/cms-pages/
           echo 'Start at index.html. This is a review copy from cms-v16-preparation; it is not published to main.' > preview/REVIEW-README.txt
       - uses: actions/upload-artifact@v4
         with:
