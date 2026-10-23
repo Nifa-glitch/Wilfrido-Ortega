@@ -58,3 +58,18 @@ content:
       - name: research_note
         label: Onderzoeksnotitie
         type: text
+
+  - name: portada_text
+    label: Portada — tekst bewerken (pilot)
+    type: file
+    path: cms-pages/portada.json
+    format: json
+    fields:
+      - name: pap_hero_intro
+        label: Portada — introductie (Papiamentu)
+        type: text
+        required: true
+      - name: en_hero_intro
+        label: Portada — introduction (English)
+        type: text
+        required: true
