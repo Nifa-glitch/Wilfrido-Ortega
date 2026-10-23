@@ -3,8 +3,10 @@ const assert = require('node:assert/strict');
 (async()=>{
  const browser=await chromium.launch({headless:true});
  const errors=[];
+ const missingImages=[];
  const page=await browser.newPage({viewport:{width:1366,height:900}});
  page.on('pageerror',e=>errors.push(e.message));
+ page.on('response',response=>{if(response.status()===404 && /\.(png|jpe?g|webp|svg)(\?|$)/i.test(response.url()))missingImages.push(response.url())});
  const base='http://127.0.0.1:8765/';
  await page.goto(base+'catalogus.html#/bibliography',{waitUntil:'domcontentloaded'});
  await page.waitForTimeout(1200);
@@ -43,6 +45,7 @@ const assert = require('node:assert/strict');
     await page.goto(base+p,{waitUntil:'domcontentloaded'});
     assert((await page.locator('body').innerText()).trim().length>100,p+' is blank');
  }
+ assert.equal(missingImages.length,0,'Missing images: '+missingImages.join(' | '));
  assert.equal(errors.length,0,'Browser JS errors: '+errors.join(' | '));
  await browser.close();
  console.log('PASS: desktop/mobile catalog, 212 records, search, no-results, genre filter, reset, language switch, six pages, no JS exceptions.');
