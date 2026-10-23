@@ -119,3 +119,26 @@ content:
         label: Tokante — introduction (English)
         type: text
         required: true
+
+  - name: su_produktividat_text
+    label: Su produktividat — tekst bewerken (pilot)
+    type: file
+    path: cms-pages/su-produktividat.json
+    format: json
+    fields:
+      - name: pap_intro_one
+        label: Eerste alinea (Papiamentu)
+        type: text
+        required: true
+      - name: pap_intro_two
+        label: Tweede alinea (Papiamentu)
+        type: text
+        required: true
+      - name: en_intro_one
+        label: First paragraph (English)
+        type: text
+        required: true
+      - name: en_intro_two
+        label: Second paragraph (English)
+        type: text
+        required: true
