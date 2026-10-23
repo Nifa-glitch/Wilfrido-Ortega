@@ -45,6 +45,13 @@ const assert = require('node:assert/strict');
  await page.waitForFunction(() => document.querySelector('main[data-content="pap"] .hero p.lead')?.textContent.includes('26 Oktober 1932'));
  assert(await page.locator('main[data-content="pap"] .hero p.lead').count()===1,'Portada pap introduction missing');
  assert(await page.locator('main[data-content="en"] .hero p.lead').count()===1,'Portada English introduction missing');
+ for (const lang of ['pap','en']) {
+   const json = require('../cms-pages/portada.json');
+   for (const [key,selector] of [['archive_heading','.sec.alt h2'],['destino_description','.destino-feature h2 + p']]) {
+     const value=await page.locator('main[data-content="'+lang+'"] '+selector).textContent();
+     assert.equal(value,json[lang+'_'+key],'CMS value mismatch: '+lang+' '+key);
+   }
+ }
  for(const p of ['index.html','su-bida.html','su-obra.html','investigashon.html','tokante.html']) {
     await page.goto(base+p,{waitUntil:'domcontentloaded'});
     assert((await page.locator('body').innerText()).trim().length>100,p+' is blank');
