@@ -1,8 +1,4 @@
 {
-  "pap": {
-    "hero_intro": "Wilfrido Ortega (26 Oktober 1932 – 26 Mei 2026) a dediká su mes na skibi i publiká buki na Papiamentu. Su produktividatnan, su forma di imprimí i su distribushon di porta pa porta ta e temanan ku e website aki ta eksplorá."
-  },
-  "en": {
-    "hero_intro": "Wilfrido Ortega (26 October 1932 – 26 May 2026) devoted himself to writing and publishing books in Papiamentu. This website explores his works, his printing methods, and his door-to-door distribution."
-  }
+  "pap_hero_intro": "Wilfrido Ortega (26 Oktober 1932 – 26 Mei 2026) a dediká su mes na skibi i publiká buki na Papiamentu. Su produktividatnan, su forma di imprimí i su distribushon di porta pa porta ta e temanan ku e website aki ta eksplorá.",
+  "en_hero_intro": "Wilfrido Ortega (26 October 1932 – 26 May 2026) devoted himself to writing and publishing books in Papiamentu. This website explores his works, his printing methods, and his door-to-door distribution."
 }
