@@ -8,6 +8,7 @@ on:
       - 'catalogus.html'
       - 'index.html'
       - 'cms-portada.js'
+      - 'cms-distribushon.js'
       - 'cms-pages/**'
       - 'app.js'
       - 'v16-visible-corrections.css'
