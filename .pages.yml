@@ -104,3 +104,18 @@ content:
         label: Su historia — introductory line (English)
         type: text
         required: true
+
+  - name: tokante_text
+    label: Tokante — tekst bewerken (pilot)
+    type: file
+    path: cms-pages/tokante.json
+    format: json
+    fields:
+      - name: pap_opening
+        label: Tokante — introductie (Papiamentu)
+        type: text
+        required: true
+      - name: en_opening
+        label: Tokante — introduction (English)
+        type: text
+        required: true
