@@ -39,6 +39,10 @@ const assert = require('node:assert/strict');
  await page.waitForTimeout(700);
  assert.equal(await count.count(),212,'Mobile catalog did not load');
  await page.screenshot({path:'/tmp/catalog-mobile.png',fullPage:false});
+ await page.goto(base+'index.html',{waitUntil:'domcontentloaded'});
+ await page.waitForFunction(() => document.querySelector('main[data-content="pap"] .hero p.lead')?.textContent.includes('26 Oktober 1932'));
+ assert(await page.locator('main[data-content="pap"] .hero p.lead').count()===1,'Portada pap introduction missing');
+ assert(await page.locator('main[data-content="en"] .hero p.lead').count()===1,'Portada English introduction missing');
  const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
  assert(overflow<20,'Mobile horizontal overflow '+overflow);
  for(const p of ['index.html','su-bida.html','su-obra.html','investigashon.html','tokante.html']) {
