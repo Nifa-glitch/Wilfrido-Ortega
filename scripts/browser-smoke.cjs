@@ -56,6 +56,9 @@ const assert = require('node:assert/strict');
  await page.waitForFunction(()=>document.querySelector('main[data-content="en"] .hero p.lead')?.textContent.includes('26 October 1932'));
  assert.equal(await page.locator('main[data-content="pap"] .hero p.lead').textContent(),require('../cms-pages/su-historia.json').pap_hero_lead);
  assert.equal(await page.locator('main[data-content="en"] .hero p.lead').textContent(),require('../cms-pages/su-historia.json').en_hero_lead);
+ await page.goto(base+'catalogus.html#/distribution',{waitUntil:'domcontentloaded'});
+ await page.waitForFunction(()=>document.querySelector('#page .v5-dist .v5-intro > p')?.textContent.includes('Wilfrido'));
+ assert.equal(await page.locator('#page .v5-dist .v5-intro > p').textContent(),require('../cms-pages/distribushon.json').pap_first_paragraph,'Distribushon CMS Papiamentu mismatch');
  for(const p of ['index.html','su-bida.html','su-obra.html','investigashon.html','tokante.html']) {
     await page.goto(base+p,{waitUntil:'domcontentloaded'});
     assert((await page.locator('body').innerText()).trim().length>100,p+' is blank');
