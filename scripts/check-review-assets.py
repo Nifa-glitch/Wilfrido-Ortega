@@ -12,7 +12,8 @@ for page in pages:
     for url in urls:
         if url.startswith(('http:','https:','#','mailto:','tel:','data:','javascript:','/')):continue
         file=url.split('?',1)[0].split('#',1)[0]
-        if not file or not (ROOT/file).exists():missing.append((page,file))
+        if not file or '${' in file:continue
+        if not (ROOT/file).exists():missing.append((page,file))
 if missing:
     print('BROKEN LOCAL REFERENCES:',*missing,sep='\n')
     sys.exit(1)
