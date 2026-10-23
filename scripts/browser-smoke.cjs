@@ -51,7 +51,7 @@ const assert = require('node:assert/strict');
  for (const route of ['index.html','tokante.html']) {
    await page.goto(base+route,{waitUntil:'domcontentloaded'});
    const samples=await page.locator('.sec.blue p, .sec.blue h2, .overview p, .overview h2, .question p').evaluateAll(nodes=>nodes.map(el=>{
-     const c=getComputedStyle(el).color.match(/\\d+(?:\\.\\d+)?/g)?.slice(0,3).map(Number)||[];
+     const c=getComputedStyle(el).color.match(/\d+(?:\.\d+)?/g)?.slice(0,3).map(Number)||[];
      return {text:el.textContent.trim().slice(0,45),brightness:c.reduce((a,b)=>a+b,0)/3,color:getComputedStyle(el).color};
    }));
    if(route==='tokante.html') assert(samples.length>0,route+' missing dark-section contrast samples');
