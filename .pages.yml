@@ -142,3 +142,26 @@ content:
         label: Second paragraph (English)
         type: text
         required: true
+
+  - name: investigashon_text
+    label: Investigashon — tekst bewerken (pilot)
+    type: file
+    path: cms-pages/investigashon.json
+    format: json
+    fields:
+      - name: pap_intro_one
+        label: Eerste onderzoeksalinea (Papiamentu)
+        type: text
+        required: true
+      - name: pap_intro_two
+        label: Tweede onderzoeksalinea (Papiamentu)
+        type: text
+        required: true
+      - name: en_intro_one
+        label: First research paragraph (English)
+        type: text
+        required: true
+      - name: en_intro_two
+        label: Second research paragraph (English)
+        type: text
+        required: true
