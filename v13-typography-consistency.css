@@ -1,0 +1,32 @@
+/* Version 13 — first-site typography rhythm merged into current editorial designs.
+   Scope: four non-approved pages only; no data, layout markup, or interactions altered. */
+:root{--v13-blue:#172f45;--v13-ivory:#fbf7ed;--v13-gold:#b49356;--v13-sage:#dce5dc;--v13-text:#253844;--v13-serif:Georgia,'Times New Roman',serif;--v13-sans:Arial,Helvetica,sans-serif}
+body.wo-v13{background:var(--v13-ivory)!important;color:var(--v13-text)!important;font:400 16px/1.65 var(--v13-serif)!important}
+/* Same approved Portada masthead, logo, nav, and PAP/EN switches on every page. */
+body.wo-v13>header.wo-unified-header{background:var(--v13-blue)!important;color:var(--v13-ivory)!important;border-bottom:3px solid var(--v13-gold)!important;min-height:109px!important}
+body.wo-v13>header.wo-unified-header .brand{font:italic 700 clamp(23px,2.05vw,31px)/1.12 var(--v13-serif)!important;color:var(--v13-ivory)!important;letter-spacing:-.01em!important}
+body.wo-v13>header.wo-unified-header .brand small,body.wo-v13>header.wo-unified-header .brand .v9-subtitle{font:700 10px/1.2 var(--v13-sans)!important;letter-spacing:2.4px!important;color:#d5bd91!important}
+body.wo-v13>header.wo-unified-header nav a{font:400 13px/1.4 var(--v13-sans)!important;color:#f3efe6!important}
+body.wo-v13>header.wo-unified-header nav a.active,body.wo-v13>header.wo-unified-header nav a[aria-current='page']{border-bottom-color:var(--v13-gold)!important}
+/* Original 1st-version editorial typographic hierarchy, paired with approved Portada palette. */
+body.wo-v13 main h1,body.wo-v13 main h2,body.wo-v13 main h3,body.wo-v13 main h4{font-family:var(--v13-serif)!important;font-weight:400!important;font-style:normal!important;letter-spacing:-.035em!important;color:var(--v13-blue)!important}
+body.wo-v13 main h1,body.wo-v13 main .page-heading h1,body.wo-v13 main .hero h1{font-size:clamp(3.25rem,5.1vw,5.5rem)!important;line-height:1.065!important;margin-top:.22em!important;margin-bottom:.28em!important}
+body.wo-v13 main h2{font-size:clamp(2rem,3.6vw,3.65rem)!important;line-height:1.16!important}
+body.wo-v13 main h3{font-size:clamp(1.35rem,2.1vw,2rem);line-height:1.23!important}
+body.wo-v13 main p,body.wo-v13 main li,body.wo-v13 main blockquote{font-family:var(--v13-serif)!important;color:var(--v13-text)!important;line-height:1.68!important}
+body.wo-v13 main .lead,body.wo-v13 main .opening,body.wo-v13 main .deck,body.wo-v13 main .intro{font:400 clamp(1.12rem,1.55vw,1.43rem)/1.55 var(--v13-serif)!important;color:var(--v13-text)!important;max-width:790px}
+body.wo-v13 main .eyebrow,body.wo-v13 main .overline,body.wo-v13 main .kicker,body.wo-v13 main .label{font:700 .78rem/1.4 var(--v13-sans)!important;letter-spacing:.13em!important;color:#916c32!important;text-transform:uppercase}
+body.wo-v13 main .page-heading,body.wo-v13 main .hero .wrap{color:var(--v13-text)}
+body.wo-v13 main .rule,body.wo-v13 main .hero-rule{border-color:var(--v13-gold)!important;background-color:var(--v13-gold)!important}
+body.wo-v13 main .gold-dot{color:var(--v13-gold)!important}
+body.wo-v13 main img{max-width:100%;height:auto}
+body.wo-v13 main .btn,body.wo-v13 main button,body.wo-v13 main input,body.wo-v13 main select{font-family:var(--v13-sans)!important}
+/* Reference website used restrained 58px title-section rhythm, rather than oversized separate mastheads. */
+body.wo-v13 main .page-heading{padding-top:58px;padding-bottom:36px}
+body.wo-v13.wo-v12-research main .hero,body.wo-v13.wo-v12-about main .hero{background:var(--v13-ivory)!important}
+body.wo-v13.wo-v12-research main .hero .wrap{max-width:1130px;margin-inline:auto}
+/* A self-contained catalog renders BOTH Bibliografia and Distribushon. Retain its app's layout and dynamic content. */
+body.wo-v13.wo-v12-catalog main .v5-intro h1,body.wo-v13.wo-v12-catalog main .page-heading h1{font-size:clamp(3.25rem,5.1vw,5.5rem)!important;line-height:1.065!important}
+body.wo-v13.wo-v12-catalog main .v5-intro p,body.wo-v13.wo-v12-catalog main .page-heading p{font:400 clamp(1.12rem,1.55vw,1.43rem)/1.55 var(--v13-serif)!important;max-width:790px}
+body.wo-v13.wo-v12-catalog main .bib-tools,body.wo-v13.wo-v12-catalog main .bib-record,body.wo-v13.wo-v12-catalog main .distribution-map{color:var(--v13-text)}
+@media(max-width:700px){body.wo-v13 main h1,body.wo-v13 main .page-heading h1,body.wo-v13 main .hero h1{font-size:clamp(2.5rem,9vw,4rem)!important}body.wo-v13 main .page-heading{padding-top:35px;padding-bottom:20px}body.wo-v13 main .lead,body.wo-v13 main .opening,body.wo-v13 main .deck{font-size:1.13rem!important}}
