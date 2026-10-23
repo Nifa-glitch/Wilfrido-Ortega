@@ -65,7 +65,7 @@ body main .audio-placeholder h2,body main .audio-placeholder h3 {
 body main .sec.blue p,body main .sec.blue li,body main .sec.blue blockquote,
 body main .overview p,body main .overview li,body main .overview blockquote,
 body main section.blue p,body main section.blue li,body main section.blue blockquote,
-body main .question p,body main .v5-quote p,body main .audio-placeholder p {
+body main .question p,body main .audio-placeholder p {
  color:var(--wo-dark-surface-text)!important;
 }
 body main .overview .quick {color:var(--wo-dark-surface-text)!important;}
@@ -91,3 +91,7 @@ body.catalog-mode main .v5-photo-panel .v5-quote,
 body.catalog-mode main .v5-photo-panel .v5-quote p {
  color:#253844!important;
 }
+
+/* Distribushon image-adjacent text block: light sage panel requires dark ink. */
+body main .v5-photo-panel .v5-quote,
+body main .v5-photo-panel .v5-quote p {color:#172f45!important;}
