@@ -571,3 +571,88 @@ content:
       - name: text_032
         label: Text — People who made their private collections available and who we
         type: text
+
+  - name: tokante_complete
+    label: Tokante — alle tekst en afbeeldingen
+    type: file
+    path: cms-pages/tokante-full.json
+    format: json
+    fields:
+      - name: text_001
+        label: Text — E bibliografia aki ta parti di un proseso pa investigá trabou 
+        type: text
+      - name: text_002
+        label: Text — Kórsou ta tin mas outor ku a bende nan bukinan di porta pa por
+        type: text
+      - name: text_003
+        label: Text — Aparte di duna un bista den e produktividat di Wilfrido, Nifa 
+        type: text
+      - name: text_004
+        label: Text — Kiko tabata e balor di Wilfrido Ortega su trabou pa desaroyo d
+        type: text
+      - name: text_005
+        label: Text — Ki impakto Wilfrido su konsistensia ta tin pa e komunidat di K
+        type: text
+      - name: text_006
+        label: Text — Kiko di kombibensia di tur tempu por saka for di e storianan d
+        type: text
+      - name: text_007
+        label: Text — Pa por hasi esaki mester a kompilá un bibliografia di e publik
+        type: text
+      - name: text_008
+        label: Text — Trayektonan ku a aportá
+        type: text
+      - name: text_009
+        label: Text — E bibliografia digital aki ta resultado di diferente trayekto 
+        type: text
+      - name: text_010
+        label: Text — Each One Teach One
+        type: text
+      - name: text_011
+        label: Text — Each One Teach One di Fonds voor CultuurParticipatie. E trayek
+        type: text
+      - name: text_012
+        label: Text — Caribbean Digital Scholarship Summer Institute. E trayekto aki
+        type: text
+      - name: text_013
+        label: Text — Nifa Ansano ta un outor kurioso pa e temanan ku e ta skibi, pe
+        type: text
+      - name: text_014
+        label: Text — This bibliography is part of an ongoing investigation into the
+        type: text
+      - name: text_015
+        label: Text — Curaçao has other authors who sold books door to door and wrot
+        type: text
+      - name: text_016
+        label: Text — Besides providing an overview of Wilfrido’s productivity, Nifa
+        type: text
+      - name: text_017
+        label: Text — What was the value of Wilfrido Ortega’s work for the developme
+        type: text
+      - name: text_018
+        label: Text — What impact did Wilfrido’s consistency have on Curaçao’s commu
+        type: text
+      - name: text_019
+        label: Text — What can his stories tell us about life and social relations a
+        type: text
+      - name: text_020
+        label: Text — To explore these questions, it was necessary to compile a bibl
+        type: text
+      - name: text_021
+        label: Text — Programmes that contributed
+        type: text
+      - name: text_022
+        label: Text — This digital bibliography grew out of several professional dev
+        type: text
+      - name: text_023
+        label: Text — Each One Teach One, a programme of Fonds voor Cultuurparticipa
+        type: text
+      - name: text_024
+        label: Text — The Caribbean Digital Scholarship Summer Institute focuses on 
+        type: text
+      - name: text_025
+        label: Text — Nifa Ansano is a writer who is curious about the subjects she 
+        type: text
+      - name: image_001
+        label: Image — nifa-ansano-portret.png
+        type: image
