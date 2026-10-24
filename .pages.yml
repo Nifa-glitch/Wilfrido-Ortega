@@ -377,3 +377,94 @@ content:
       - name: image_002
         label: Image — destino-di-amor-home.jpeg
         type: image
+
+  - name: su_produktividat_complete
+    label: su-produktividat — alle tekst en afbeeldingen
+    type: file
+    path: cms-pages/su-produktividat-full.json
+    format: json
+    fields:
+      - name: text_001
+        label: Text — Wilfrido ta konosí pa su novelanan. Mayoria ta novela romantik
+        type: text
+      - name: text_002
+        label: Text — Durante e investigashon a deskubrí algun buki di poesia di Wil
+        type: text
+      - name: text_003
+        label: Text — Wilfrido Ortega ku su bukinan
+        type: text
+      - name: text_004
+        label: Text — Un bista riba diferente forma den kua Wilfrido Ortega a traha.
+        type: text
+      - name: text_005
+        label: Text — Ta e novelanan  el a transformá den obranan di teater. Guiermi
+        type: text
+      - name: text_006
+        label: Text — Na Kòrsou e ta tin mas ku un grupo, un di nan tabata yama AKRI
+        type: text
+      - name: text_007
+        label: Text — AKRIDWO &amp; BONADWO
+        type: text
+      - name: text_008
+        label: Text — Na Boneiru e ta tin e grupo ku el a yama BONADWO, Bon Aktornan
+        type: text
+      - name: text_009
+        label: Text — Papi Adriana, Tio Ali i Boi Antoine, ta algun persona ku a akt
+        type: text
+      - name: text_010
+        label: Text — Radionovela tambe tabata un adaptashon di novelanan ku Wilfrid
+        type: text
+      - name: text_011
+        label: Text — El a transformá e novela E konvenio di amor ku a pasa na Radio
+        type: text
+      - name: text_012
+        label: Text — Originalmente a hasi uzo di e espasio na Fundashon Pro Bista p
+        type: text
+      - name: text_013
+        label: Text — E material no ta agregá komo audio na e testpagina aki.
+        type: text
+      - name: text_014
+        label: Text — Wilfrido is known for his novels. Most are romantic novels, as
+        type: text
+      - name: text_015
+        label: Text — During the research, several books of poetry by Wilfrido were 
+        type: text
+      - name: text_016
+        label: Text — Wilfrido Ortega working with his books
+        type: text
+      - name: text_017
+        label: Text — An introduction to the different forms in which Wilfrido Orteg
+        type: text
+      - name: text_018
+        label: Text — He also adapted his novels into theatrical works. Guiermito di
+        type: text
+      - name: text_019
+        label: Text — On Curaçao he had more than one group; one was called AKRIDWO.
+        type: text
+      - name: text_020
+        label: Text — On Bonaire, he had a group he called BONADWO, short for Bon Ak
+        type: text
+      - name: text_021
+        label: Text — Papi Adriana, Tio Ali and Boi Antoine are among those who acte
+        type: text
+      - name: text_022
+        label: Text — Radio dramas were also adaptations of novels written by Wilfri
+        type: text
+      - name: text_023
+        label: Text — He adapted the novel E konvenio di amor, which was broadcast o
+        type: text
+      - name: text_024
+        label: Text — The recording was initially made using facilities at Fundashon
+        type: text
+      - name: text_025
+        label: Text — No audio is included in this test page.
+        type: text
+      - name: image_001
+        label: Image — wilfrido-aan-boeken.png
+        type: image
+      - name: image_002
+        label: Image — IMG_1913.jpeg
+        type: image
+      - name: image_003
+        label: Image — wilfrido-afbeelding-02.jpeg
+        type: image
