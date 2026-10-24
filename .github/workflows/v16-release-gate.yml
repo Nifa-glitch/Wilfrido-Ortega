@@ -1,0 +1,80 @@
+name: V16 release gate — private review artifact
+on:
+  push:
+    branches: [release-v16-publication-check]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-and-package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check bibliography and page references
+        run: |
+          node scripts/check-site.cjs
+          python scripts/check-review-assets.py
+      - name: Build visitor-only publication folder
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import shutil
+          root=Path('.')
+          dest=Path('release-site')
+          dest.mkdir(exist_ok=True)
+          extensions={'.html','.css','.js','.png','.jpg','.jpeg','.webp','.svg','.gif','.ico','.woff','.woff2','.ttf'}
+          files=[]
+          for p in root.iterdir():
+              if p.is_file() and (p.suffix.lower() in extensions or p.name in ('CNAME','robots.txt','favicon.ico')):
+                  shutil.copy2(p,dest/p.name);files.append(p.name)
+          src=Path('cms-pages')
+          if src.exists():
+              out=dest/'cms-pages';out.mkdir(exist_ok=True)
+              for p in src.glob('*.json'):
+                  shutil.copy2(p,out/p.name)
+          expected=['index.html','su-bida.html','su-obra.html','catalogus.html','investigashon.html','tokante.html','bibliography-data.js','CNAME']
+          assert all((dest/p).exists() for p in expected), 'Required public site file missing'
+          forbidden=['.pages.yml','bibliografie-editor-test.html','cms-editable','cms-test','cms-diagnostic','cms/bibliography','package.json','scripts','.github']
+          assert not any((dest/p).exists() for p in forbidden), 'CMS development file exposed'
+          assert (dest/'CNAME').read_text().strip()=='www.wilfridoortega.org'
+          print('Visitor-only files:',len(files),'CMS page JSON:',len(list((dest/'cms-pages').glob('*.json'))))
+          PY
+      - name: Recheck public copy references
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          root=Path('release-site')
+          missing=[]
+          for page in root.glob('*.html'):
+              body=page.read_text(encoding='utf-8')
+              for url in re.findall(r"""(?:src|href)=["']([^"']+)["']""",body):
+                  if url.startswith(('http:','https:','#','mailto:','tel:','data:','javascript:','/')):continue
+                  target=url.split('?',1)[0].split('#',1)[0]
+                  if target and '${' not in target and not (root/target).exists():missing.append((page.name,target))
+          assert not missing, f'Missing public assets: {missing}'
+          print('Public HTML references OK')
+          PY
+      - name: Install browser test dependencies
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Browser smoke test against visitor-only folder
+        run: |
+          (cd release-site && python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/release-http.log 2>&1 &)
+          sleep 2
+          node scripts/browser-smoke.cjs
+      - name: Upload release candidate for review (not published)
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wilfrido-v16-clean-release-candidate
+          path: release-site/
+          retention-days: 7
