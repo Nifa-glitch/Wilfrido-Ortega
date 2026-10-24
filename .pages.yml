@@ -20,13 +20,27 @@ content:
         label: Publicatiejaar
         type: string
 
-  - name: bibliography_collection_diagnostic
-    label: Bibliografia — padtest (1 boek)
-    type: collection
-    path: /cms-diagnostic
+  - name: bibliography_direct_0002
+    label: Bibliografia — libro 0002 (test)
+    type: file
+    path: cms-editable/wo-record-0002.json
     format: json
     fields:
+      - name: id
+        label: Record-ID
+        type: string
+        readonly: true
       - name: title
+        label: Titel
+        type: string
+      - name: year
+        label: Publicatiejaar
+        type: string
+      - name: genre
+        label: Genre
+        type: string
+      - name: series
+        label: Serie
         type: string
 
   - name: bibliography_editable
