@@ -203,85 +203,85 @@ content:
     format: json
     fields:
       - name: text_001
-        label: Text — Wilfrido Ortega  26 Oktober 1932 – + 26 Mei 2026
+        label: "Text — Wilfrido Ortega  26 Oktober 1932 – + 26 Mei 2026"
         type: text
       - name: text_002
-        label: Text — “For di mucha mi tabata konta kuenta na entiero. Paden nan tab
+        label: "Text — “For di mucha mi tabata konta kuenta na entiero. Paden nan tab"
         type: text
       - name: text_003
-        label: Text — — Wilfrido Ortega
+        label: "Text — — Wilfrido Ortega"
         type: text
       - name: text_004
-        label: Text — Na 1958 Wilfrido Ortega a retirá for di refineria i a dediká s
+        label: "Text — Na 1958 Wilfrido Ortega a retirá for di refineria i a dediká s"
         type: text
       - name: text_005
-        label: Text — Titulonan konmemorativo
+        label: "Text — Titulonan konmemorativo"
         type: text
       - name: text_006
-        label: Text — E promé manuskrito di Destino di Amor ta’tin 500 pagina. Riba 
+        label: "Text — E promé manuskrito di Destino di Amor ta’tin 500 pagina. Riba "
         type: text
       - name: text_007
-        label: Text — Destino di Amor
+        label: "Text — Destino di Amor"
         type: text
       - name: text_008
-        label: Text — Bo por pordoná mi?
+        label: "Text — Bo por pordoná mi?"
         type: text
       - name: text_009
-        label: Text — Aksesibildat di e material
+        label: "Text — Aksesibildat di e material"
         type: text
       - name: text_010
-        label: Text — Wilfrido a yega di bisa ku no tin niun di su klientenan ku tin
+        label: "Text — Wilfrido a yega di bisa ku no tin niun di su klientenan ku tin"
         type: text
       - name: text_011
-        label: Text — “Loke pa e kritíko literario por parse na promé instante di po
+        label: "Text — “Loke pa e kritíko literario por parse na promé instante di po"
         type: text
       - name: text_012
-        label: Text — Tradukshon poetiko di Nifa Ansano pa un ekspreshon di Wim Rutg
+        label: "Text — Tradukshon poetiko di Nifa Ansano pa un ekspreshon di Wim Rutg"
         type: text
       - name: text_013
-        label: Text — Na 1990 e Fundashon Kinderen in aktie, presidí pa Guillermo Ro
+        label: "Text — Na 1990 e Fundashon Kinderen in aktie, presidí pa Guillermo Ro"
         type: text
       - name: text_014
-        label: Text — Na 2007 Kas di Kultura Kòrsou tambe a duna homenahe na Wilfrid
+        label: "Text — Na 2007 Kas di Kultura Kòrsou tambe a duna homenahe na Wilfrid"
         type: text
       - name: text_015
-        label: Text — Di Fundashon Arte di Palabra el a risibí un tapushi literario 
+        label: "Text — Di Fundashon Arte di Palabra el a risibí un tapushi literario "
         type: text
       - name: text_016
-        label: Text — Wilfrido Ortega · 26 October 1932 – 26 May 2026
+        label: "Text — Wilfrido Ortega · 26 October 1932 – 26 May 2026"
         type: text
       - name: text_017
-        label: Text — “Ever since I was a child, I used to tell stories at funerals.
+        label: "Text — “Ever since I was a child, I used to tell stories at funerals."
         type: text
       - name: text_018
-        label: Text — In 1958, Wilfrido Ortega left the refinery and devoted himself
+        label: "Text — In 1958, Wilfrido Ortega left the refinery and devoted himself"
         type: text
       - name: text_019
-        label: Text — Commemorative titles
+        label: "Text — Commemorative titles"
         type: text
       - name: text_020
-        label: Text — The first manuscript of Destino di Amor contained 500 pages. O
+        label: "Text — The first manuscript of Destino di Amor contained 500 pages. O"
         type: text
       - name: text_021
-        label: Text — Access to the material
+        label: "Text — Access to the material"
         type: text
       - name: text_022
-        label: Text — Wilfrido once said that none of his customers owned all his bo
+        label: "Text — Wilfrido once said that none of his customers owned all his bo"
         type: text
       - name: text_023
-        label: Text — “What may at first seem of little value or inferior to the lit
+        label: "Text — “What may at first seem of little value or inferior to the lit"
         type: text
       - name: text_024
-        label: Text — Poetic translation by Nifa Ansano of an expression by Wim Rutg
+        label: "Text — Poetic translation by Nifa Ansano of an expression by Wim Rutg"
         type: text
       - name: text_025
-        label: Text — In 1990, Fundashon Kinderen in aktie, chaired by Guillermo Ros
+        label: "Text — In 1990, Fundashon Kinderen in aktie, chaired by Guillermo Ros"
         type: text
       - name: text_026
-        label: Text — In 2007, Kas di Kultura Kòrsou also paid tribute to Wilfrido. 
+        label: "Text — In 2007, Kas di Kultura Kòrsou also paid tribute to Wilfrido. "
         type: text
       - name: text_027
-        label: Text — In 2008, he received a literary tapushi from Fundashon Arte di
+        label: "Text — In 2008, he received a literary tapushi from Fundashon Arte di"
         type: text
       - name: image_001
         label: Image — destino-di-amor-home.jpeg
@@ -297,79 +297,79 @@ content:
     format: json
     fields:
       - name: text_001
-        label: Text — Wilfrido Ortega (26 Oktober 1932 – 26 Mei 2026) a dediká su me
+        label: "Text — Wilfrido Ortega (26 Oktober 1932 – 26 Mei 2026) a dediká su me"
         type: text
       - name: text_002
-        label: Text — Bida, literatura i investigashon
+        label: "Text — Bida, literatura i investigashon"
         type: text
       - name: text_003
-        label: Text — Deskubrí e archivo
+        label: "Text — Deskubrí e archivo"
         type: text
       - name: text_004
-        label: Text — Su komienso na 1958, titulonan konmemorativo, aksesibildat i r
+        label: "Text — Su komienso na 1958, titulonan konmemorativo, aksesibildat i r"
         type: text
       - name: text_005
-        label: Text — Su produktividat →
+        label: "Text — Su produktividat →"
         type: text
       - name: text_006
-        label: Text — Novela, poesia, teater, radionovela i músika.
+        label: "Text — Novela, poesia, teater, radionovela i músika."
         type: text
       - name: text_007
-        label: Text — Buska titulonan, serie, edishonnan i lugánan kaminda por haña 
+        label: "Text — Buska titulonan, serie, edishonnan i lugánan kaminda por haña "
         type: text
       - name: text_008
-        label: Text — Di porta pa porta: kon e bukinan tabata yega na lesadónan.
+        label: "Text — Di porta pa porta: kon e bukinan tabata yega na lesadónan."
         type: text
       - name: text_009
-        label: Text — Investigashon →
+        label: "Text — Investigashon →"
         type: text
       - name: text_010
-        label: Text — Seri, publikashon, diferente vershon i referensianan bibliográ
+        label: "Text — Seri, publikashon, diferente vershon i referensianan bibliográ"
         type: text
       - name: text_011
-        label: Text — E motivashon i metanan di e investigashon.
+        label: "Text — E motivashon i metanan di e investigashon."
         type: text
       - name: text_012
-        label: Text — UN DI E PROMÉ PUBLIKASHONNAN
+        label: "Text — UN DI E PROMÉ PUBLIKASHONNAN"
         type: text
       - name: text_013
-        label: Text — Destino di Amor
+        label: "Text — Destino di Amor"
         type: text
       - name: text_014
-        label: Text — E promé manuskrito di Destino di Amor tabata tin 500 pagina. R
+        label: "Text — E promé manuskrito di Destino di Amor tabata tin 500 pagina. R"
         type: text
       - name: text_015
-        label: Text — Wilfrido Ortega (26 October 1932 – 26 May 2026) devoted himsel
+        label: "Text — Wilfrido Ortega (26 October 1932 – 26 May 2026) devoted himsel"
         type: text
       - name: text_016
-        label: Text — Life, literature and research
+        label: "Text — Life, literature and research"
         type: text
       - name: text_017
-        label: Text — Discover the archive
+        label: "Text — Discover the archive"
         type: text
       - name: text_018
-        label: Text — Beginnings in 1958, commemorative titles, access and recogniti
+        label: "Text — Beginnings in 1958, commemorative titles, access and recogniti"
         type: text
       - name: text_019
-        label: Text — Novels, poetry, theatre, radio drama and music.
+        label: "Text — Novels, poetry, theatre, radio drama and music."
         type: text
       - name: text_020
-        label: Text — Explore titles, series, editions and where publications can be
+        label: "Text — Explore titles, series, editions and where publications can be"
         type: text
       - name: text_021
-        label: Text — Door to door: how the books reached readers.
+        label: "Text — Door to door: how the books reached readers."
         type: text
       - name: text_022
-        label: Text — Series, publications, different editions and bibliographic ref
+        label: "Text — Series, publications, different editions and bibliographic ref"
         type: text
       - name: text_023
-        label: Text — The motivation and aims of the research.
+        label: "Text — The motivation and aims of the research."
         type: text
       - name: text_024
-        label: Text — AN EARLY PUBLICATION
+        label: "Text — AN EARLY PUBLICATION"
         type: text
       - name: text_025
-        label: Text — The first manuscript of Destino di Amor contained 500 pages. O
+        label: "Text — The first manuscript of Destino di Amor contained 500 pages. O"
         type: text
       - name: image_001
         label: Image — wilfrido-portret-home.png
@@ -385,79 +385,79 @@ content:
     format: json
     fields:
       - name: text_001
-        label: Text — Wilfrido ta konosí pa su novelanan. Mayoria ta novela romantik
+        label: "Text — Wilfrido ta konosí pa su novelanan. Mayoria ta novela romantik"
         type: text
       - name: text_002
-        label: Text — Durante e investigashon a deskubrí algun buki di poesia di Wil
+        label: "Text — Durante e investigashon a deskubrí algun buki di poesia di Wil"
         type: text
       - name: text_003
-        label: Text — Wilfrido Ortega ku su bukinan
+        label: "Text — Wilfrido Ortega ku su bukinan"
         type: text
       - name: text_004
-        label: Text — Un bista riba diferente forma den kua Wilfrido Ortega a traha.
+        label: "Text — Un bista riba diferente forma den kua Wilfrido Ortega a traha."
         type: text
       - name: text_005
-        label: Text — Ta e novelanan  el a transformá den obranan di teater. Guiermi
+        label: "Text — Ta e novelanan  el a transformá den obranan di teater. Guiermi"
         type: text
       - name: text_006
-        label: Text — Na Kòrsou e ta tin mas ku un grupo, un di nan tabata yama AKRI
+        label: "Text — Na Kòrsou e ta tin mas ku un grupo, un di nan tabata yama AKRI"
         type: text
       - name: text_007
-        label: Text — AKRIDWO &amp; BONADWO
+        label: "Text — AKRIDWO &amp; BONADWO"
         type: text
       - name: text_008
-        label: Text — Na Boneiru e ta tin e grupo ku el a yama BONADWO, Bon Aktornan
+        label: "Text — Na Boneiru e ta tin e grupo ku el a yama BONADWO, Bon Aktornan"
         type: text
       - name: text_009
-        label: Text — Papi Adriana, Tio Ali i Boi Antoine, ta algun persona ku a akt
+        label: "Text — Papi Adriana, Tio Ali i Boi Antoine, ta algun persona ku a akt"
         type: text
       - name: text_010
-        label: Text — Radionovela tambe tabata un adaptashon di novelanan ku Wilfrid
+        label: "Text — Radionovela tambe tabata un adaptashon di novelanan ku Wilfrid"
         type: text
       - name: text_011
-        label: Text — El a transformá e novela E konvenio di amor ku a pasa na Radio
+        label: "Text — El a transformá e novela E konvenio di amor ku a pasa na Radio"
         type: text
       - name: text_012
-        label: Text — Originalmente a hasi uzo di e espasio na Fundashon Pro Bista p
+        label: "Text — Originalmente a hasi uzo di e espasio na Fundashon Pro Bista p"
         type: text
       - name: text_013
-        label: Text — E material no ta agregá komo audio na e testpagina aki.
+        label: "Text — E material no ta agregá komo audio na e testpagina aki."
         type: text
       - name: text_014
-        label: Text — Wilfrido is known for his novels. Most are romantic novels, as
+        label: "Text — Wilfrido is known for his novels. Most are romantic novels, as"
         type: text
       - name: text_015
-        label: Text — During the research, several books of poetry by Wilfrido were 
+        label: "Text — During the research, several books of poetry by Wilfrido were "
         type: text
       - name: text_016
-        label: Text — Wilfrido Ortega working with his books
+        label: "Text — Wilfrido Ortega working with his books"
         type: text
       - name: text_017
-        label: Text — An introduction to the different forms in which Wilfrido Orteg
+        label: "Text — An introduction to the different forms in which Wilfrido Orteg"
         type: text
       - name: text_018
-        label: Text — He also adapted his novels into theatrical works. Guiermito di
+        label: "Text — He also adapted his novels into theatrical works. Guiermito di"
         type: text
       - name: text_019
-        label: Text — On Curaçao he had more than one group; one was called AKRIDWO.
+        label: "Text — On Curaçao he had more than one group; one was called AKRIDWO."
         type: text
       - name: text_020
-        label: Text — On Bonaire, he had a group he called BONADWO, short for Bon Ak
+        label: "Text — On Bonaire, he had a group he called BONADWO, short for Bon Ak"
         type: text
       - name: text_021
-        label: Text — Papi Adriana, Tio Ali and Boi Antoine are among those who acte
+        label: "Text — Papi Adriana, Tio Ali and Boi Antoine are among those who acte"
         type: text
       - name: text_022
-        label: Text — Radio dramas were also adaptations of novels written by Wilfri
+        label: "Text — Radio dramas were also adaptations of novels written by Wilfri"
         type: text
       - name: text_023
-        label: Text — He adapted the novel E konvenio di amor, which was broadcast o
+        label: "Text — He adapted the novel E konvenio di amor, which was broadcast o"
         type: text
       - name: text_024
-        label: Text — The recording was initially made using facilities at Fundashon
+        label: "Text — The recording was initially made using facilities at Fundashon"
         type: text
       - name: text_025
-        label: Text — No audio is included in this test page.
+        label: "Text — No audio is included in this test page."
         type: text
       - name: image_001
         label: Image — wilfrido-aan-boeken.png
@@ -476,100 +476,100 @@ content:
     format: json
     fields:
       - name: text_001
-        label: Text — E bibliografia a registrá tur título ku a topa i den ki forma 
+        label: "Text — E bibliografia a registrá tur título ku a topa i den ki forma "
         type: text
       - name: text_002
-        label: Text — Pa a yega na e bibliografia aki a hasi un investigashon digita
+        label: "Text — Pa a yega na e bibliografia aki a hasi un investigashon digita"
         type: text
       - name: text_003
-        label: Text — E obra den sifra
+        label: "Text — E obra den sifra"
         type: text
       - name: text_004
-        label: Text — E sifranan definitivo di obra, tomo, edishon i publikashon ta 
+        label: "Text — E sifranan definitivo di obra, tomo, edishon i publikashon ta "
         type: text
       - name: text_005
-        label: Text — Seri, edishon i republikashon.
+        label: "Text — Seri, edishon i republikashon."
         type: text
       - name: text_006
-        label: Text — A publiká e mes un obra den diferente forma. Den vershon kompl
+        label: "Text — A publiká e mes un obra den diferente forma. Den vershon kompl"
         type: text
       - name: text_007
-        label: Text — Relashon entre e obranan
+        label: "Text — Relashon entre e obranan"
         type: text
       - name: text_008
-        label: Text — Wilfrido a skibi diferente seri. Algun tabata karga e mes un t
+        label: "Text — Wilfrido a skibi diferente seri. Algun tabata karga e mes un t"
         type: text
       - name: text_009
-        label: Text — E numbernan ku falta den un registrashon no ta prueba ku e tom
+        label: "Text — E numbernan ku falta den un registrashon no ta prueba ku e tom"
         type: text
       - name: text_010
-        label: Text — Premio, rekonosementu i homenahe
+        label: "Text — Premio, rekonosementu i homenahe"
         type: text
       - name: text_011
-        label: Text — Publikashonnan tokante Ortega
+        label: "Text — Publikashonnan tokante Ortega"
         type: text
       - name: text_012
-        label: Text — Artíkulo, buki, reseña, i otro fuentenan den kua e ta menshoná
+        label: "Text — Artíkulo, buki, reseña, i otro fuentenan den kua e ta menshoná"
         type: text
       - name: text_013
-        label: Text — Literatura konsultá:
+        label: "Text — Literatura konsultá:"
         type: text
       - name: text_014
-        label: Text — Famianan di Wilfrido Ortega.
+        label: "Text — Famianan di Wilfrido Ortega."
         type: text
       - name: text_015
-        label: Text — Personanan ku a hasi nan kolekshon personal disponibel i ku ta
+        label: "Text — Personanan ku a hasi nan kolekshon personal disponibel i ku ta"
         type: text
       - name: text_016
-        label: Text — The bibliography records every title located and the forms in 
+        label: "Text — The bibliography records every title located and the forms in "
         type: text
       - name: text_017
-        label: Text — To compile this bibliography, digital research was conducted u
+        label: "Text — To compile this bibliography, digital research was conducted u"
         type: text
       - name: text_018
-        label: Text — Literary output in figures
+        label: "Text — Literary output in figures"
         type: text
       - name: text_019
-        label: Text — Final counts of works, volumes, editions and publications depe
+        label: "Text — Final counts of works, volumes, editions and publications depe"
         type: text
       - name: text_020
-        label: Text — Series, editions and republications
+        label: "Text — Series, editions and republications"
         type: text
       - name: text_021
-        label: Text — The same work was published in different forms, as complete ed
+        label: "Text — The same work was published in different forms, as complete ed"
         type: text
       - name: text_022
-        label: Text — Relationships between the works
+        label: "Text — Relationships between the works"
         type: text
       - name: text_023
-        label: Text — Wilfrido wrote several series. Some carried the same title acr
+        label: "Text — Wilfrido wrote several series. Some carried the same title acr"
         type: text
       - name: text_024
-        label: Text — Missing volume numbers
+        label: "Text — Missing volume numbers"
         type: text
       - name: text_025
-        label: Text — A number missing from a record does not prove the correspondin
+        label: "Text — A number missing from a record does not prove the correspondin"
         type: text
       - name: text_026
-        label: Text — Awards, recognition and tributes
+        label: "Text — Awards, recognition and tributes"
         type: text
       - name: text_027
-        label: Text — Publications mentioning Ortega
+        label: "Text — Publications mentioning Ortega"
         type: text
       - name: text_028
-        label: Text — Articles, books, reviews and other sources that mention Ortega
+        label: "Text — Articles, books, reviews and other sources that mention Ortega"
         type: text
       - name: text_029
-        label: Text — Consulted literature
+        label: "Text — Consulted literature"
         type: text
       - name: text_030
-        label: Text — Acknowledgements
+        label: "Text — Acknowledgements"
         type: text
       - name: text_031
-        label: Text — The families of Wilfrido Ortega.
+        label: "Text — The families of Wilfrido Ortega."
         type: text
       - name: text_032
-        label: Text — People who made their private collections available and who we
+        label: "Text — People who made their private collections available and who we"
         type: text
 
   - name: tokante_complete
@@ -579,79 +579,79 @@ content:
     format: json
     fields:
       - name: text_001
-        label: Text — E bibliografia aki ta parti di un proseso pa investigá trabou 
+        label: "Text — E bibliografia aki ta parti di un proseso pa investigá trabou "
         type: text
       - name: text_002
-        label: Text — Kórsou ta tin mas outor ku a bende nan bukinan di porta pa por
+        label: "Text — Kórsou ta tin mas outor ku a bende nan bukinan di porta pa por"
         type: text
       - name: text_003
-        label: Text — Aparte di duna un bista den e produktividat di Wilfrido, Nifa 
+        label: "Text — Aparte di duna un bista den e produktividat di Wilfrido, Nifa "
         type: text
       - name: text_004
-        label: Text — Kiko tabata e balor di Wilfrido Ortega su trabou pa desaroyo d
+        label: "Text — Kiko tabata e balor di Wilfrido Ortega su trabou pa desaroyo d"
         type: text
       - name: text_005
-        label: Text — Ki impakto Wilfrido su konsistensia ta tin pa e komunidat di K
+        label: "Text — Ki impakto Wilfrido su konsistensia ta tin pa e komunidat di K"
         type: text
       - name: text_006
-        label: Text — Kiko di kombibensia di tur tempu por saka for di e storianan d
+        label: "Text — Kiko di kombibensia di tur tempu por saka for di e storianan d"
         type: text
       - name: text_007
-        label: Text — Pa por hasi esaki mester a kompilá un bibliografia di e publik
+        label: "Text — Pa por hasi esaki mester a kompilá un bibliografia di e publik"
         type: text
       - name: text_008
-        label: Text — Trayektonan ku a aportá
+        label: "Text — Trayektonan ku a aportá"
         type: text
       - name: text_009
-        label: Text — E bibliografia digital aki ta resultado di diferente trayekto 
+        label: "Text — E bibliografia digital aki ta resultado di diferente trayekto "
         type: text
       - name: text_010
-        label: Text — Each One Teach One
+        label: "Text — Each One Teach One"
         type: text
       - name: text_011
-        label: Text — Each One Teach One di Fonds voor CultuurParticipatie. E trayek
+        label: "Text — Each One Teach One di Fonds voor CultuurParticipatie. E trayek"
         type: text
       - name: text_012
-        label: Text — Caribbean Digital Scholarship Summer Institute. E trayekto aki
+        label: "Text — Caribbean Digital Scholarship Summer Institute. E trayekto aki"
         type: text
       - name: text_013
-        label: Text — Nifa Ansano ta un outor kurioso pa e temanan ku e ta skibi, pe
+        label: "Text — Nifa Ansano ta un outor kurioso pa e temanan ku e ta skibi, pe"
         type: text
       - name: text_014
-        label: Text — This bibliography is part of an ongoing investigation into the
+        label: "Text — This bibliography is part of an ongoing investigation into the"
         type: text
       - name: text_015
-        label: Text — Curaçao has other authors who sold books door to door and wrot
+        label: "Text — Curaçao has other authors who sold books door to door and wrot"
         type: text
       - name: text_016
-        label: Text — Besides providing an overview of Wilfrido’s productivity, Nifa
+        label: "Text — Besides providing an overview of Wilfrido’s productivity, Nifa"
         type: text
       - name: text_017
-        label: Text — What was the value of Wilfrido Ortega’s work for the developme
+        label: "Text — What was the value of Wilfrido Ortega’s work for the developme"
         type: text
       - name: text_018
-        label: Text — What impact did Wilfrido’s consistency have on Curaçao’s commu
+        label: "Text — What impact did Wilfrido’s consistency have on Curaçao’s commu"
         type: text
       - name: text_019
-        label: Text — What can his stories tell us about life and social relations a
+        label: "Text — What can his stories tell us about life and social relations a"
         type: text
       - name: text_020
-        label: Text — To explore these questions, it was necessary to compile a bibl
+        label: "Text — To explore these questions, it was necessary to compile a bibl"
         type: text
       - name: text_021
-        label: Text — Programmes that contributed
+        label: "Text — Programmes that contributed"
         type: text
       - name: text_022
-        label: Text — This digital bibliography grew out of several professional dev
+        label: "Text — This digital bibliography grew out of several professional dev"
         type: text
       - name: text_023
-        label: Text — Each One Teach One, a programme of Fonds voor Cultuurparticipa
+        label: "Text — Each One Teach One, a programme of Fonds voor Cultuurparticipa"
         type: text
       - name: text_024
-        label: Text — The Caribbean Digital Scholarship Summer Institute focuses on 
+        label: "Text — The Caribbean Digital Scholarship Summer Institute focuses on "
         type: text
       - name: text_025
-        label: Text — Nifa Ansano is a writer who is curious about the subjects she 
+        label: "Text — Nifa Ansano is a writer who is curious about the subjects she "
         type: text
       - name: image_001
         label: Image — nifa-ansano-portret.png
