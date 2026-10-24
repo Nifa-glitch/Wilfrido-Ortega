@@ -20,6 +20,30 @@ content:
         label: Publicatiejaar
         type: string
 
+  - name: bibliography_collection_diagnostic
+    label: Bibliografia — collectie test (1 boek)
+    type: collection
+    path: cms-diagnostic
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    view:
+      primary: title
+      fields: [title, year]
+    fields:
+      - name: id
+        label: Record-ID
+        type: string
+        readonly: true
+      - name: title
+        label: Titel
+        type: string
+      - name: year
+        label: Publicatiejaar
+        type: string
+
   - name: bibliography_editable
     label: Bibliografia — bewerkbare boeken (test)
     type: collection
