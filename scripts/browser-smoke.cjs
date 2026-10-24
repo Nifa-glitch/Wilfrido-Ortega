@@ -73,7 +73,7 @@ const assert = require('node:assert/strict');
  await page.route('**/'+testPath,route=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({...baseline,text_001:'CMS LIVE EDIT TEST — homepage text'})}));
  await page.goto(base+'index.html',{waitUntil:'domcontentloaded'});
  await page.waitForFunction(()=>document.querySelector('main')?.innerText.includes('CMS LIVE EDIT TEST'));
- assert((await page.locator('main').innerText()).includes('CMS LIVE EDIT TEST'),'Full CMS text override did not appear');
+ assert((await page.locator('main[data-content="pap"]').innerText()).includes('CMS LIVE EDIT TEST'),'Full CMS text override did not appear');
  await page.unroute('**/'+testPath);
  assert.equal(missingImages.length,0,'Missing images: '+missingImages.join(' | '));
  // Verify contrast in dark sections; a light foreground must be computed
