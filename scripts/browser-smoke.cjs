@@ -74,7 +74,20 @@ const assert = require('node:assert/strict');
  await page.goto(base+'index.html',{waitUntil:'domcontentloaded'});
  await page.waitForFunction(()=>document.querySelector('main')?.innerText.includes('CMS LIVE EDIT TEST'));
  assert((await page.locator('main[data-content="pap"]').innerText()).includes('CMS LIVE EDIT TEST'),'Full CMS text override did not appear');
+ // Simulate an image chosen in Pages CMS; confirm the correct existing image element changes.
+ const imageEntry=Object.entries(baseline).find(([key])=>key.startsWith('image_'));
+ assert(imageEntry,'Homepage CMS has no editable image');
+ const [imageKey,originalImage]=imageEntry;
+ const replacement='cms/media/CMS-IMAGE-REPLACEMENT-TEST.png';
  await page.unroute('**/'+testPath);
+ await page.route('**/'+testPath,route=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({...baseline,[imageKey]:replacement})}));
+ await page.goto(base+'index.html',{waitUntil:'domcontentloaded'});
+ await page.waitForFunction(src=>[...document.querySelectorAll('main img')].some(img=>img.getAttribute('src')===src),replacement);
+ assert((await page.locator('main img[src="'+replacement+'"]').count())>0,'CMS image override failed');
+ await page.unroute('**/'+testPath);
+ await page.goto(base+'index.html',{waitUntil:'domcontentloaded'});
+ assert((await page.locator('main img[src="'+originalImage+'"]').count())>0,'Original image not restored after test');
+
  assert.equal(missingImages.length,0,'Missing images: '+missingImages.join(' | '));
  // Verify contrast in dark sections; a light foreground must be computed
  // even when the design system imposes a dark heading or paragraph color.
