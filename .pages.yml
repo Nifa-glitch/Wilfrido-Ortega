@@ -656,3 +656,94 @@ content:
       - name: image_001
         label: Image — nifa-ansano-portret.png
         type: image
+
+  - name: distribushon_complete
+    label: Distribushon — alle 5 verhalen (PAP / EN)
+    type: file
+    path: cms-pages/distribushon-full.json
+    format: json
+    fields:
+      - name: pap_section_1_title
+        label: "pap section 1 title"
+        type: string
+      - name: pap_section_1_paragraph_1
+        label: "pap section 1 paragraph 1"
+        type: text
+      - name: pap_section_1_paragraph_2
+        label: "pap section 1 paragraph 2"
+        type: text
+      - name: pap_section_1_paragraph_3
+        label: "pap section 1 paragraph 3"
+        type: text
+      - name: pap_section_2_title
+        label: "pap section 2 title"
+        type: string
+      - name: pap_section_2_paragraph_1
+        label: "pap section 2 paragraph 1"
+        type: text
+      - name: pap_section_2_paragraph_2
+        label: "pap section 2 paragraph 2"
+        type: text
+      - name: pap_section_3_title
+        label: "pap section 3 title"
+        type: string
+      - name: pap_section_3_paragraph_1
+        label: "pap section 3 paragraph 1"
+        type: text
+      - name: pap_section_4_title
+        label: "pap section 4 title"
+        type: string
+      - name: pap_section_4_paragraph_1
+        label: "pap section 4 paragraph 1"
+        type: text
+      - name: pap_section_4_paragraph_2
+        label: "pap section 4 paragraph 2"
+        type: text
+      - name: pap_section_5_title
+        label: "pap section 5 title"
+        type: string
+      - name: pap_section_5_paragraph_1
+        label: "pap section 5 paragraph 1"
+        type: text
+      - name: en_section_1_title
+        label: "en section 1 title"
+        type: string
+      - name: en_section_1_paragraph_1
+        label: "en section 1 paragraph 1"
+        type: text
+      - name: en_section_1_paragraph_2
+        label: "en section 1 paragraph 2"
+        type: text
+      - name: en_section_1_paragraph_3
+        label: "en section 1 paragraph 3"
+        type: text
+      - name: en_section_2_title
+        label: "en section 2 title"
+        type: string
+      - name: en_section_2_paragraph_1
+        label: "en section 2 paragraph 1"
+        type: text
+      - name: en_section_2_paragraph_2
+        label: "en section 2 paragraph 2"
+        type: text
+      - name: en_section_3_title
+        label: "en section 3 title"
+        type: string
+      - name: en_section_3_paragraph_1
+        label: "en section 3 paragraph 1"
+        type: text
+      - name: en_section_4_title
+        label: "en section 4 title"
+        type: string
+      - name: en_section_4_paragraph_1
+        label: "en section 4 paragraph 1"
+        type: text
+      - name: en_section_4_paragraph_2
+        label: "en section 4 paragraph 2"
+        type: text
+      - name: en_section_5_title
+        label: "en section 5 title"
+        type: string
+      - name: en_section_5_paragraph_1
+        label: "en section 5 paragraph 1"
+        type: text
