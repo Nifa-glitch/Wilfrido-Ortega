@@ -59,6 +59,10 @@ const assert = require('node:assert/strict');
  await page.goto(base+'catalogus.html#/distribution',{waitUntil:'domcontentloaded'});
  await page.waitForFunction(()=>document.querySelector('#page .v5-dist .v5-intro > p')?.textContent.includes('Wilfrido'));
  assert.equal(await page.locator('#page .v5-dist .v5-intro > p').textContent(),require('../cms-pages/distribushon.json').pap_first_paragraph,'Distribushon CMS Papiamentu mismatch');
+ await page.goto(base+'catalogus.html#/sources',{waitUntil:'domcontentloaded'});
+ await page.waitForFunction(()=>document.querySelector('#page .source-warning')?.textContent.includes('October 2026')||document.querySelector('#page .source-warning')?.textContent.includes('òktober 2026'));
+ const warning=await page.locator('#page .source-warning').textContent();
+ assert([require('../cms-pages/fuentenan.json').pap_warning,require('../cms-pages/fuentenan.json').en_warning].includes(warning),'Fuentenan CMS content mismatch');
  for(const p of ['index.html','su-bida.html','su-obra.html','investigashon.html','tokante.html']) {
     await page.goto(base+p,{waitUntil:'domcontentloaded'});
     assert((await page.locator('body').innerText()).trim().length>100,p+' is blank');
