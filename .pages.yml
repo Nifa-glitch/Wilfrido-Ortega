@@ -289,3 +289,91 @@ content:
       - name: image_002
         label: Image — original-book-cover.jpeg
         type: image
+
+  - name: portada_complete
+    label: portada — alle tekst en afbeeldingen
+    type: file
+    path: cms-pages/portada-full.json
+    format: json
+    fields:
+      - name: text_001
+        label: Text — Wilfrido Ortega (26 Oktober 1932 – 26 Mei 2026) a dediká su me
+        type: text
+      - name: text_002
+        label: Text — Bida, literatura i investigashon
+        type: text
+      - name: text_003
+        label: Text — Deskubrí e archivo
+        type: text
+      - name: text_004
+        label: Text — Su komienso na 1958, titulonan konmemorativo, aksesibildat i r
+        type: text
+      - name: text_005
+        label: Text — Su produktividat →
+        type: text
+      - name: text_006
+        label: Text — Novela, poesia, teater, radionovela i músika.
+        type: text
+      - name: text_007
+        label: Text — Buska titulonan, serie, edishonnan i lugánan kaminda por haña 
+        type: text
+      - name: text_008
+        label: Text — Di porta pa porta: kon e bukinan tabata yega na lesadónan.
+        type: text
+      - name: text_009
+        label: Text — Investigashon →
+        type: text
+      - name: text_010
+        label: Text — Seri, publikashon, diferente vershon i referensianan bibliográ
+        type: text
+      - name: text_011
+        label: Text — E motivashon i metanan di e investigashon.
+        type: text
+      - name: text_012
+        label: Text — UN DI E PROMÉ PUBLIKASHONNAN
+        type: text
+      - name: text_013
+        label: Text — Destino di Amor
+        type: text
+      - name: text_014
+        label: Text — E promé manuskrito di Destino di Amor tabata tin 500 pagina. R
+        type: text
+      - name: text_015
+        label: Text — Wilfrido Ortega (26 October 1932 – 26 May 2026) devoted himsel
+        type: text
+      - name: text_016
+        label: Text — Life, literature and research
+        type: text
+      - name: text_017
+        label: Text — Discover the archive
+        type: text
+      - name: text_018
+        label: Text — Beginnings in 1958, commemorative titles, access and recogniti
+        type: text
+      - name: text_019
+        label: Text — Novels, poetry, theatre, radio drama and music.
+        type: text
+      - name: text_020
+        label: Text — Explore titles, series, editions and where publications can be
+        type: text
+      - name: text_021
+        label: Text — Door to door: how the books reached readers.
+        type: text
+      - name: text_022
+        label: Text — Series, publications, different editions and bibliographic ref
+        type: text
+      - name: text_023
+        label: Text — The motivation and aims of the research.
+        type: text
+      - name: text_024
+        label: Text — AN EARLY PUBLICATION
+        type: text
+      - name: text_025
+        label: Text — The first manuscript of Destino di Amor contained 500 pages. O
+        type: text
+      - name: image_001
+        label: Image — wilfrido-portret-home.png
+        type: image
+      - name: image_002
+        label: Image — destino-di-amor-home.jpeg
+        type: image
