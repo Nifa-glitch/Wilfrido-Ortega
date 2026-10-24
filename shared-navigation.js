@@ -2,7 +2,7 @@
 (function(){
  'use strict';
  const keys=['home','life','work','bibliography','research','distribution','sources','about'];
- const pap=['Portada','Su historia','Su produktividat','Bibliografia','Investigashon','Distribushon','Fuentenan','Tokante'];
+ const pap=['Portada','Su historia','Su produktividat','Bibliografia','Investigashon','Distribushon','Fuente','Tokante'];
  const en=['Home','His life','His works','Bibliography','Research','Distribution','Sources','About'];
  const destinations=['index.html','su-bida.html','su-obra.html','catalogus.html#/bibliography','investigashon.html','catalogus.html#/distribution','catalogus.html#/sources','tokante.html'];
  function pageRoute(){let p=location.pathname.split('/').pop()||'index.html';if(p==='catalogus.html'){let r=(location.hash||'#/bibliography').slice(2).split('?')[0];return keys.includes(r)?r:'bibliography'}return {'index.html':'home','su-bida.html':'life','su-obra.html':'work','investigashon.html':'research','tokante.html':'about'}[p]||'home';}
