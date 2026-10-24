@@ -59,145 +59,8 @@ content:
         label: Onderzoeksnotitie
         type: text
 
-  - name: portada_text
-    label: Portada — tekst bewerken (pilot)
-    type: file
-    path: cms-pages/portada.json
-    format: json
-    fields:
-      - name: pap_hero_intro
-        label: Portada — introductie (Papiamentu)
-        type: text
-        required: true
-      - name: en_hero_intro
-        label: Portada — introduction (English)
-        type: text
-        required: true
-      - name: pap_archive_heading
-        label: Portada — archiefkop (Papiamentu)
-        type: string
-        required: true
-      - name: en_archive_heading
-        label: Portada — archive heading (English)
-        type: string
-        required: true
-      - name: pap_destino_description
-        label: Portada — Destino di Amor tekst (Papiamentu)
-        type: text
-        required: true
-      - name: en_destino_description
-        label: Portada — Destino di Amor text (English)
-        type: text
-        required: true
-
-  - name: su_historia_text
-    label: Su historia — tekst bewerken (pilot)
-    type: file
-    path: cms-pages/su-historia.json
-    format: json
-    fields:
-      - name: pap_hero_lead
-        label: Su historia — introductieregel (Papiamentu)
-        type: text
-        required: true
-      - name: en_hero_lead
-        label: Su historia — introductory line (English)
-        type: text
-        required: true
-
-  - name: tokante_text
-    label: Tokante — tekst bewerken (pilot)
-    type: file
-    path: cms-pages/tokante.json
-    format: json
-    fields:
-      - name: pap_opening
-        label: Tokante — introductie (Papiamentu)
-        type: text
-        required: true
-      - name: en_opening
-        label: Tokante — introduction (English)
-        type: text
-        required: true
-
-  - name: su_produktividat_text
-    label: Su produktividat — tekst bewerken (pilot)
-    type: file
-    path: cms-pages/su-produktividat.json
-    format: json
-    fields:
-      - name: pap_intro_one
-        label: Eerste alinea (Papiamentu)
-        type: text
-        required: true
-      - name: pap_intro_two
-        label: Tweede alinea (Papiamentu)
-        type: text
-        required: true
-      - name: en_intro_one
-        label: First paragraph (English)
-        type: text
-        required: true
-      - name: en_intro_two
-        label: Second paragraph (English)
-        type: text
-        required: true
-
-  - name: investigashon_text
-    label: Investigashon — tekst bewerken (pilot)
-    type: file
-    path: cms-pages/investigashon.json
-    format: json
-    fields:
-      - name: pap_intro_one
-        label: Eerste onderzoeksalinea (Papiamentu)
-        type: text
-        required: true
-      - name: pap_intro_two
-        label: Tweede onderzoeksalinea (Papiamentu)
-        type: text
-        required: true
-      - name: en_intro_one
-        label: First research paragraph (English)
-        type: text
-        required: true
-      - name: en_intro_two
-        label: Second research paragraph (English)
-        type: text
-        required: true
-
-  - name: distribushon_text
-    label: Distribushon — tekst bewerken (pilot)
-    type: file
-    path: cms-pages/distribushon.json
-    format: json
-    fields:
-      - name: pap_first_paragraph
-        label: Porta pa porta — eerste alinea (Papiamentu)
-        type: text
-        required: true
-      - name: en_first_paragraph
-        label: Door to door — first paragraph (English)
-        type: text
-        required: true
-
-  - name: fuentenan_text
-    label: Fuentenan — tekst bewerken (pilot)
-    type: file
-    path: cms-pages/fuentenan.json
-    format: json
-    fields:
-      - name: pap_warning
-        label: Fuentenan — inventaris uitleg (Papiamentu)
-        type: text
-        required: true
-      - name: en_warning
-        label: Fuentenan — inventory explanation (English)
-        type: text
-        required: true
-
   - name: su_historia_complete
-    label: Su historia — alle tekst en afbeeldingen
+    label: Su historia — tekst en afbeeldingen
     type: file
     path: cms-pages/su-historia-full.json
     format: json
@@ -291,7 +154,7 @@ content:
         type: image
 
   - name: portada_complete
-    label: portada — alle tekst en afbeeldingen
+    label: Portada — tekst en afbeeldingen
     type: file
     path: cms-pages/portada-full.json
     format: json
@@ -379,7 +242,7 @@ content:
         type: image
 
   - name: su_produktividat_complete
-    label: su-produktividat — alle tekst en afbeeldingen
+    label: Su produktividat — tekst en afbeeldingen
     type: file
     path: cms-pages/su-produktividat-full.json
     format: json
@@ -470,7 +333,7 @@ content:
         type: image
 
   - name: investigashon_complete
-    label: investigashon — alle tekst en afbeeldingen
+    label: Investigashon — tekst
     type: file
     path: cms-pages/investigashon-full.json
     format: json
@@ -573,7 +436,7 @@ content:
         type: text
 
   - name: tokante_complete
-    label: Tokante — alle tekst en afbeeldingen
+    label: Tokante — tekst en afbeeldingen
     type: file
     path: cms-pages/tokante-full.json
     format: json
@@ -658,117 +521,117 @@ content:
         type: image
 
   - name: distribushon_complete
-    label: Distribushon — alle 5 verhalen (PAP / EN)
+    label: Distribushon — verhalen
     type: file
     path: cms-pages/distribushon-full.json
     format: json
     fields:
       - name: pap_section_1_title
-        label: "pap section 1 title"
+        label: "Papiamentu · Verhaal 1 · Kop"
         type: string
       - name: pap_section_1_paragraph_1
-        label: "pap section 1 paragraph 1"
+        label: "Papiamentu · Verhaal 1 · Alinea 1"
         type: text
       - name: pap_section_1_paragraph_2
-        label: "pap section 1 paragraph 2"
+        label: "Papiamentu · Verhaal 1 · Alinea 2"
         type: text
       - name: pap_section_1_paragraph_3
-        label: "pap section 1 paragraph 3"
+        label: "Papiamentu · Verhaal 1 · Alinea 3"
         type: text
       - name: pap_section_2_title
-        label: "pap section 2 title"
+        label: "Papiamentu · Verhaal 2 · Kop"
         type: string
       - name: pap_section_2_paragraph_1
-        label: "pap section 2 paragraph 1"
+        label: "Papiamentu · Verhaal 2 · Alinea 1"
         type: text
       - name: pap_section_2_paragraph_2
-        label: "pap section 2 paragraph 2"
+        label: "Papiamentu · Verhaal 2 · Alinea 2"
         type: text
       - name: pap_section_3_title
-        label: "pap section 3 title"
+        label: "Papiamentu · Verhaal 3 · Kop"
         type: string
       - name: pap_section_3_paragraph_1
-        label: "pap section 3 paragraph 1"
+        label: "Papiamentu · Verhaal 3 · Alinea 1"
         type: text
       - name: pap_section_4_title
-        label: "pap section 4 title"
+        label: "Papiamentu · Verhaal 4 · Kop"
         type: string
       - name: pap_section_4_paragraph_1
-        label: "pap section 4 paragraph 1"
+        label: "Papiamentu · Verhaal 4 · Alinea 1"
         type: text
       - name: pap_section_4_paragraph_2
-        label: "pap section 4 paragraph 2"
+        label: "Papiamentu · Verhaal 4 · Alinea 2"
         type: text
       - name: pap_section_5_title
-        label: "pap section 5 title"
+        label: "Papiamentu · Verhaal 5 · Kop"
         type: string
       - name: pap_section_5_paragraph_1
-        label: "pap section 5 paragraph 1"
+        label: "Papiamentu · Verhaal 5 · Alinea 1"
         type: text
       - name: en_section_1_title
-        label: "en section 1 title"
+        label: "English · Verhaal 1 · Kop"
         type: string
       - name: en_section_1_paragraph_1
-        label: "en section 1 paragraph 1"
+        label: "English · Verhaal 1 · Alinea 1"
         type: text
       - name: en_section_1_paragraph_2
-        label: "en section 1 paragraph 2"
+        label: "English · Verhaal 1 · Alinea 2"
         type: text
       - name: en_section_1_paragraph_3
-        label: "en section 1 paragraph 3"
+        label: "English · Verhaal 1 · Alinea 3"
         type: text
       - name: en_section_2_title
-        label: "en section 2 title"
+        label: "English · Verhaal 2 · Kop"
         type: string
       - name: en_section_2_paragraph_1
-        label: "en section 2 paragraph 1"
+        label: "English · Verhaal 2 · Alinea 1"
         type: text
       - name: en_section_2_paragraph_2
-        label: "en section 2 paragraph 2"
+        label: "English · Verhaal 2 · Alinea 2"
         type: text
       - name: en_section_3_title
-        label: "en section 3 title"
+        label: "English · Verhaal 3 · Kop"
         type: string
       - name: en_section_3_paragraph_1
-        label: "en section 3 paragraph 1"
+        label: "English · Verhaal 3 · Alinea 1"
         type: text
       - name: en_section_4_title
-        label: "en section 4 title"
+        label: "English · Verhaal 4 · Kop"
         type: string
       - name: en_section_4_paragraph_1
-        label: "en section 4 paragraph 1"
+        label: "English · Verhaal 4 · Alinea 1"
         type: text
       - name: en_section_4_paragraph_2
-        label: "en section 4 paragraph 2"
+        label: "English · Verhaal 4 · Alinea 2"
         type: text
       - name: en_section_5_title
-        label: "en section 5 title"
+        label: "English · Verhaal 5 · Kop"
         type: string
       - name: en_section_5_paragraph_1
-        label: "en section 5 paragraph 1"
+        label: "English · Verhaal 5 · Alinea 1"
         type: text
 
   - name: fuentenan_complete
-    label: Fuentenan — teksten bij brongegevens
+    label: Fuentenan — toelichting
     type: file
     path: cms-pages/fuentenan-full.json
     format: json
     fields:
       - name: pap_warning
-        label: "pap warning"
+        label: "Papiamentu · Inventory note"
         type: text
       - name: en_warning
-        label: "en warning"
+        label: "English · Inventory note"
         type: text
       - name: pap_statuses
-        label: "pap statuses"
+        label: "Papiamentu · Collection statuses"
         type: text
       - name: en_statuses
-        label: "en statuses"
+        label: "English · Collection statuses"
         type: text
       - name: pap_historical
-        label: "pap historical"
+        label: "Papiamentu · Historical sources"
         type: text
       - name: en_historical
-        label: "en historical"
+        label: "English · Historical sources"
         type: text
