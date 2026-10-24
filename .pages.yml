@@ -3,6 +3,23 @@ media:
   input: cms/media
   output: /cms/media
 content:
+  - name: bibliography_diagnostic
+    label: Bibliografia — diagnostische test (1 boek)
+    type: file
+    path: cms-editable/wo-record-0001.json
+    format: json
+    fields:
+      - name: id
+        label: Record-ID
+        type: string
+        readonly: true
+      - name: title
+        label: Titel
+        type: string
+      - name: year
+        label: Publicatiejaar
+        type: string
+
   - name: bibliography_editable
     label: Bibliografia — bewerkbare boeken (test)
     type: collection
