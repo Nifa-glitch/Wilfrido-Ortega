@@ -747,3 +747,28 @@ content:
       - name: en_section_5_paragraph_1
         label: "en section 5 paragraph 1"
         type: text
+
+  - name: fuentenan_complete
+    label: Fuentenan — teksten bij brongegevens
+    type: file
+    path: cms-pages/fuentenan-full.json
+    format: json
+    fields:
+      - name: pap_warning
+        label: "pap warning"
+        type: text
+      - name: en_warning
+        label: "en warning"
+        type: text
+      - name: pap_statuses
+        label: "pap statuses"
+        type: text
+      - name: en_statuses
+        label: "en statuses"
+        type: text
+      - name: pap_historical
+        label: "pap historical"
+        type: text
+      - name: en_historical
+        label: "en historical"
+        type: text
