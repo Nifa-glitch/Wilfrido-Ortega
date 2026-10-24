@@ -32,7 +32,7 @@ jobs:
           extensions={'.html','.css','.js','.png','.jpg','.jpeg','.webp','.svg','.gif','.ico','.woff','.woff2','.ttf'}
           files=[]
           for p in root.iterdir():
-              if p.is_file() and (p.suffix.lower() in extensions or p.name in ('CNAME','robots.txt','favicon.ico')):
+              if p.is_file() and (p.suffix.lower() in extensions or p.name in ('CNAME','robots.txt','favicon.ico')) and not (p.name.startswith('cms-') and not p.name.endswith('-full.js')):
                   shutil.copy2(p,dest/p.name);files.append(p.name)
           src=Path('cms-pages')
           if src.exists():
