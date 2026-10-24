@@ -195,3 +195,97 @@ content:
         label: Fuentenan — inventory explanation (English)
         type: text
         required: true
+
+  - name: su_historia_complete
+    label: Su historia — alle tekst en afbeeldingen
+    type: file
+    path: cms-pages/su-historia-full.json
+    format: json
+    fields:
+      - name: text_001
+        label: Text — Wilfrido Ortega  26 Oktober 1932 – + 26 Mei 2026
+        type: text
+      - name: text_002
+        label: Text — “For di mucha mi tabata konta kuenta na entiero. Paden nan tab
+        type: text
+      - name: text_003
+        label: Text — — Wilfrido Ortega
+        type: text
+      - name: text_004
+        label: Text — Na 1958 Wilfrido Ortega a retirá for di refineria i a dediká s
+        type: text
+      - name: text_005
+        label: Text — Titulonan konmemorativo
+        type: text
+      - name: text_006
+        label: Text — E promé manuskrito di Destino di Amor ta’tin 500 pagina. Riba 
+        type: text
+      - name: text_007
+        label: Text — Destino di Amor
+        type: text
+      - name: text_008
+        label: Text — Bo por pordoná mi?
+        type: text
+      - name: text_009
+        label: Text — Aksesibildat di e material
+        type: text
+      - name: text_010
+        label: Text — Wilfrido a yega di bisa ku no tin niun di su klientenan ku tin
+        type: text
+      - name: text_011
+        label: Text — “Loke pa e kritíko literario por parse na promé instante di po
+        type: text
+      - name: text_012
+        label: Text — Tradukshon poetiko di Nifa Ansano pa un ekspreshon di Wim Rutg
+        type: text
+      - name: text_013
+        label: Text — Na 1990 e Fundashon Kinderen in aktie, presidí pa Guillermo Ro
+        type: text
+      - name: text_014
+        label: Text — Na 2007 Kas di Kultura Kòrsou tambe a duna homenahe na Wilfrid
+        type: text
+      - name: text_015
+        label: Text — Di Fundashon Arte di Palabra el a risibí un tapushi literario 
+        type: text
+      - name: text_016
+        label: Text — Wilfrido Ortega · 26 October 1932 – 26 May 2026
+        type: text
+      - name: text_017
+        label: Text — “Ever since I was a child, I used to tell stories at funerals.
+        type: text
+      - name: text_018
+        label: Text — In 1958, Wilfrido Ortega left the refinery and devoted himself
+        type: text
+      - name: text_019
+        label: Text — Commemorative titles
+        type: text
+      - name: text_020
+        label: Text — The first manuscript of Destino di Amor contained 500 pages. O
+        type: text
+      - name: text_021
+        label: Text — Access to the material
+        type: text
+      - name: text_022
+        label: Text — Wilfrido once said that none of his customers owned all his bo
+        type: text
+      - name: text_023
+        label: Text — “What may at first seem of little value or inferior to the lit
+        type: text
+      - name: text_024
+        label: Text — Poetic translation by Nifa Ansano of an expression by Wim Rutg
+        type: text
+      - name: text_025
+        label: Text — In 1990, Fundashon Kinderen in aktie, chaired by Guillermo Ros
+        type: text
+      - name: text_026
+        label: Text — In 2007, Kas di Kultura Kòrsou also paid tribute to Wilfrido. 
+        type: text
+      - name: text_027
+        label: Text — In 2008, he received a literary tapushi from Fundashon Arte di
+        type: text
+      - name: image_001
+        label: Image — destino-di-amor-home.jpeg
+        type: image
+      - name: image_002
+        label: Image — original-book-cover.jpeg
+        type: image
