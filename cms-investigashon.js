@@ -1,2 +1,0 @@
-/* Research page introductory paragraphs, original HTML serves as fallback. */
-(async()=>{try{const r=await fetch('cms-pages/investigashon.json',{cache:'no-store'});if(!r.ok)return;const d=await r.json();for(const lang of ['pap','en']){const nodes=document.querySelectorAll('main[data-locale="'+lang+'"] .hero .wrap > p');for(let i=0;i<2;i++){const v=d[lang+'_intro_'+(i?'two':'one')];if(nodes[i]&&typeof v==='string'&&v.trim())nodes[i].textContent=v;}}}catch(e){console.warn('Investigashon CMS: original text retained',e);}})();
