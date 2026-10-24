@@ -103,6 +103,7 @@ body:has(.v5-dist){background:#fcf5e7}
 @media(max-width:900px){.v5-upper{grid-template-columns:1fr 1fr}.v5-location-grid{grid-template-columns:1fr 1fr}.v5-lower{grid-template-columns:1fr}.v5-lower .v5-story+.v5-story{border-left:0}}
 @media(max-width:690px){.v5-dist{padding:20px 16px 45px;font-size:16px}.v5-upper,.v5-location-grid,.v5-club,.v5-raffle,.v5-lower{grid-template-columns:minmax(0,1fr)}.v5-intro{padding:10px 0}.v5-intro h1{font-size:clamp(44px,11vw,60px)}.v5-places{padding:20px 18px}.v5-location-grid ol{columns:2;min-width:0;padding-left:25px;font-size:15px}.v5-photo-panel .v5-figure img{max-height:330px}.v5-location-grid .v5-figure img{max-height:260px}.v5-story{padding:25px 18px}.v5-story p{font-size:16px}.v5-count{padding:16px}.v5-media img{max-height:320px}}
 @media(max-width:390px){.v5-location-grid ol{columns:1}}
+ .v5-location-grid:has(> ol:only-child){display:block} .v5-location-grid:has(> ol:only-child) ol{columns:2;max-width:100%;width:100%}
 </style>
 <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/>
 <script defer="" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -504,7 +505,7 @@ window.WILFRIDO_RESEARCH = {
  // v8: Activate existing, approved map-and-editorial layout. Historical data unchanged.
 function distributionPage(c){
  const pap=lang==='pap', s=window.EDITORIAL_DATA.distribution[lang],escP=txt=>`<p>${esc(txt)}</p>`;
- const placeNames=['Barber','Wespen','Lagun','Tera Kòrá','Seru Fortuna','Buenavista','Sta Maria','Otrobanda','Fuik','Montaña','Brievengat','Suffisant','Sta. Rosa','Bonam'];
+ const placeNames=['Westpunt','Lagun','Barber','Tera Kòrá','Sta. Maria','Buenavista','Otrobanda','Brievengat','Suffisant','Bonam','Sta. Rosa','Kwartje','Montaña','Fuik'];
  const address='Weg naar Welgelegen 13';
  const figure=(file,alt)=>`<figure class="v5-figure"><img src="${file}" alt="${esc(alt)}" loading="lazy"></figure>`;
  const story=(item,cls,images)=>`<article class="v5-story ${cls}"><div><h2>${esc(item[0])}</h2>${item[1].map(escP).join('')}</div><div class="v5-media">${images}</div></article>`;
@@ -512,7 +513,7 @@ function distributionPage(c){
  return `<div class="v5-dist">
  <section class="v5-upper"><div class="v5-intro"><div class="v5-eyebrow">HERENSIA LITERARIO DI KÒRSOU</div><h1>${pap?'Di porta pa porta':'Door to door'}</h1>${escP(first[1][0])}</div>
  <div class="v5-photo-panel">${figure('distribution-photo-from-approved-mockup.png',pap?'Ilustrashon: un hende ta entregá un buki na porta':'Illustration of a book being delivered at a doorway')}<blockquote>“Di porta pa porta,<br> un diálogo direkto ku su pueblo.”</blockquote><div class="v5-quote">${escP(first[1][1])}</div></div>
- <div class="v5-places"><h2>${pap?'BARIONAN KU WILFRIDO TABATA BISHITÁ':'NEIGHBORHOODS WILFRIDO VISITED'}</h2><div class="v5-location-grid">${figure('curacao-outline-from-approved-mockup.png','Mapa di Kòrsou sin markadónan')}<ol>${placeNames.map(name=>`<li>${esc(name)}</li>`).join('')}</ol></div><p>${pap?'Esaki ta un mapa di barionan ku Wilfrido tabata bishitá.':'These are the neighborhoods Wilfrido visited.'}</p><p class="v5-address">${pap?'Punto di salida':'Starting address'}: ${address}</p></div></section>
+ <div class="v5-places"><h2>${pap?'BARIONAN KU WILFRIDO TABATA BISHITÁ':'NEIGHBORHOODS WILFRIDO VISITED'}</h2><div class="v5-location-grid"><ol>${placeNames.map(name=>`<li>${esc(name)}</li>`).join('')}</ol></div><p>${pap?'E barionan aki ta presentá den e sekvensia di west pa sùit.':'These neighborhoods are listed in sequence from west to south.'}</p><p class="v5-address">${pap?'Punto di salida':'Starting address'}: ${address}</p></div></section>
  <div class="v5-count">${escP(first[1][2])}</div>
  <div class="v5-main-stories">${story(club,'v5-club',figure('illustration-3.jpeg',pap?'Komprobante original pa paga despues':'Original payment record'))}
  ${story(raffle,'v5-raffle',figure('original-nadwo-form.png','Formulario original N.A.D.W.O.')+figure('original-5y6-list.png','Lista original di paketnan 5 y 6'))}
