@@ -180,3 +180,18 @@ content:
         label: Door to door — first paragraph (English)
         type: text
         required: true
+
+  - name: fuentenan_text
+    label: Fuentenan — tekst bewerken (pilot)
+    type: file
+    path: cms-pages/fuentenan.json
+    format: json
+    fields:
+      - name: pap_warning
+        label: Fuentenan — inventaris uitleg (Papiamentu)
+        type: text
+        required: true
+      - name: en_warning
+        label: Fuentenan — inventory explanation (English)
+        type: text
+        required: true
