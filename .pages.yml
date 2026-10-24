@@ -21,9 +21,9 @@ content:
         type: string
 
   - name: bibliography_collection_diagnostic
-    label: Bibliografia — minimale collectietest
+    label: Bibliografia — padtest (1 boek)
     type: collection
-    path: cms-diagnostic
+    path: /cms-diagnostic
     format: json
     fields:
       - name: title
