@@ -1,0 +1,32 @@
+name: Generate approved Wilfrido social preview
+on:
+  push:
+    paths:
+      - '.github/workflows/generate-social-preview.yml'
+      - '.github/social-preview-source.html'
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: browser-actions/setup-chrome@v1
+      - name: Render approved homepage-style preview
+        run: |
+          google-chrome --headless --no-sandbox --disable-gpu --hide-scrollbars --allow-file-access-from-files --window-size=1200,630 --screenshot=social-preview-home.png "file://$GITHUB_WORKSPACE/.github/social-preview-source.html"
+          python3 -m pip install --quiet pillow
+          python3 - <<'PY'
+          from PIL import Image
+          im = Image.open('social-preview-home.png').convert('RGB')
+          if im.size != (1200, 630):
+              im = im.resize((1200, 630), Image.Resampling.LANCZOS)
+          im.save('social-preview-home.png', optimize=True)
+          print('Social preview size:', im.size)
+          PY
+      - name: Commit generated preview
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add social-preview-home.png
+          git diff --cached --quiet || (git commit -m "Publish approved homepage-style social preview image" && git push)
