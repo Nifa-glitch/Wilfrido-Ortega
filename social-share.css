@@ -1,0 +1,16 @@
+/* Shared social sharing bar. Independent of the site's existing page layouts. */
+.wo-share{background:#f5f0e6;border-top:1px solid #e3d7c3;border-bottom:1px solid #e3d7c3;padding:21px max(20px,calc((100% - 1120px)/2));color:#172f45;font-family:Arial,Helvetica,sans-serif}
+.wo-share-inner{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;justify-content:space-between}
+.wo-share-heading{font-size:13px;font-weight:700;letter-spacing:.045em;margin:0}
+.wo-share-actions{display:flex;flex-wrap:wrap;gap:9px}
+.wo-share-action{appearance:none;display:inline-flex;align-items:center;gap:8px;min-height:39px;padding:8px 13px;background:#fffdf8;border:1px solid #cfc4b1;border-radius:5px;color:#172f45;text-decoration:none;font:600 13px/1.25 Arial,Helvetica,sans-serif;cursor:pointer}
+.wo-share-action:hover{border-color:#b49356;background:#fff9e9;color:#172f45}
+.wo-share-action:focus-visible{outline:3px solid #b49356;outline-offset:2px}
+.wo-share-icon{width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;border-radius:4px;background:#172f45;color:white;font:700 13px/1 Arial,sans-serif}
+.wo-share-action[data-service="instagram"] .wo-share-icon{background:#a44979}
+.wo-share-action[data-service="facebook"] .wo-share-icon{background:#2265a8}
+.wo-share-action[data-service="linkedin"] .wo-share-icon{background:#0a6991;font-size:11px}
+.wo-share-action[data-service="copy"] .wo-share-icon{background:#6d776c}
+.wo-share-note{width:100%;font:12px/1.4 Arial,Helvetica,sans-serif;color:#52636b;margin:0}
+.wo-share-status{min-height:1em;margin:0;font:12px/1.4 Arial,Helvetica,sans-serif;color:#2e6651}
+@media(max-width:650px){.wo-share-inner{justify-content:flex-start}.wo-share-actions{gap:7px}.wo-share-action{padding:8px 10px}}
