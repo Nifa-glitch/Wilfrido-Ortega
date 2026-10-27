@@ -55,17 +55,8 @@ function nativeShare(){
 el('[data-service="share"]').addEventListener('click',()=>{
  if(!nativeShare())copyLink();
 });
-/* On devices with native sharing, use the real Share menu instead of navigating
-   to a Facebook/LinkedIn URL that may redirect in an in-app browser.
-   On desktop without native sharing, the anchors open the platform's web dialog. */
-for(const service of ['facebook','linkedin']){
- el('[data-service="'+service+'"]').addEventListener('click',event=>{
-  if(typeof navigator.share==='function'){
-   event.preventDefault();
-   if(!nativeShare())copyLink();
-  }
- });
-}
+/* Facebook and LinkedIn links intentionally use their official web sharing dialogs
+   on both desktop and mobile. The separate Share button uses native sharing. */
 el('[data-service="instagram"]').addEventListener('click',()=>{
  if(!nativeShare())copyLink();
 });
