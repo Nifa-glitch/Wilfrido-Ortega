@@ -4,7 +4,7 @@
 const root=document.createElement('section');
 root.className='wo-share';
 root.setAttribute('aria-label','Share this page');
-root.innerHTML='<div class="wo-share-inner"><h2 class="wo-share-heading"></h2><div class="wo-share-actions"><button class="wo-share-action" data-service="share" type="button"><span class="wo-share-icon" aria-hidden="true">↗</span><span class="wo-share-main-label"></span></button><a class="wo-share-action" data-service="facebook" target="_blank" rel="noopener noreferrer"><span class="wo-share-icon" aria-hidden="true">f</span><span>Facebook</span></a><a class="wo-share-action" data-service="linkedin" target="_blank" rel="noopener noreferrer"><span class="wo-share-icon" aria-hidden="true">in</span><span>LinkedIn</span></a><button class="wo-share-action" data-service="instagram" type="button"><span class="wo-share-icon" aria-hidden="true">◎</span><span>Instagram</span></button><button class="wo-share-action" data-service="copy" type="button"><span class="wo-share-icon" aria-hidden="true">⧉</span><span class="wo-copy-label"></span></button></div><p class="wo-share-note"></p><p class="wo-share-status" role="status" aria-live="polite"></p></div>';
+root.innerHTML='<div class="wo-share-inner"><h2 class="wo-share-heading"></h2><div class="wo-share-actions"><button class="wo-share-action" data-service="share" type="button"><span class="wo-share-icon" aria-hidden="true">↗</span><span class="wo-share-main-label"></span></button><a class="wo-share-action" data-service="facebook" target="_blank" rel="noopener noreferrer"><span class="wo-share-icon" aria-hidden="true">f</span></a><a class="wo-share-action" data-service="linkedin" target="_blank" rel="noopener noreferrer"><span class="wo-share-icon" aria-hidden="true">in</span></a><button class="wo-share-action" data-service="instagram" type="button"><span class="wo-share-icon" aria-hidden="true">◎</span></button><button class="wo-share-action" data-service="copy" type="button"><span class="wo-share-icon" aria-hidden="true">⧉</span><span class="wo-copy-label"></span></button></div><p class="wo-share-note"></p><p class="wo-share-status" role="status" aria-live="polite"></p></div>';
 const el=(selector)=>root.querySelector(selector);
 const en=()=>document.documentElement.lang.toLowerCase().startsWith('en');
 const url=()=>window.location.href;
@@ -21,6 +21,10 @@ function update(){
  el('[data-service="facebook"]').href='https://www.facebook.com/sharer/sharer.php?u='+encoded;
  el('[data-service="linkedin"]').href='https://www.linkedin.com/sharing/share-offsite/?url='+encoded;
  el('[data-service="instagram"]').setAttribute('aria-label',en()?'Open share options or copy the link for Instagram':'Habri opshonnan di kompartí òf kopia e link pa Instagram');
+ el('[data-service="share"]').setAttribute('aria-label',en()?'Share this page':'Kompartí e página aki');
+ el('[data-service="facebook"]').setAttribute('aria-label',en()?'Share on Facebook':'Kompartí riba Facebook');
+ el('[data-service="linkedin"]').setAttribute('aria-label',en()?'Share on LinkedIn':'Kompartí riba LinkedIn');
+ el('[data-service="copy"]').setAttribute('aria-label',en()?'Copy link':'Kopia link');
  el('.wo-share-status').textContent='';
 }
 async function copyLink(){
@@ -55,17 +59,8 @@ function nativeShare(){
 el('[data-service="share"]').addEventListener('click',()=>{
  if(!nativeShare())copyLink();
 });
-/* On devices with native sharing, use the real Share menu instead of navigating
-   to a Facebook/LinkedIn URL that may redirect in an in-app browser.
-   On desktop without native sharing, the anchors open the platform's web dialog. */
-for(const service of ['facebook','linkedin']){
- el('[data-service="'+service+'"]').addEventListener('click',event=>{
-  if(typeof navigator.share==='function'){
-   event.preventDefault();
-   if(!nativeShare())copyLink();
-  }
- });
-}
+/* Facebook and LinkedIn links intentionally use their official web sharing dialogs
+   on both desktop and mobile. The separate Share button uses native sharing. */
 el('[data-service="instagram"]').addEventListener('click',()=>{
  if(!nativeShare())copyLink();
 });
